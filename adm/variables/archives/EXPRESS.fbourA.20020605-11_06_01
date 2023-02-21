@@ -1,0 +1,31 @@
+
+
+PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:$HOME/bin:/usr/bin/X11:/sbin:.
+
+export PATH
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+
+LANG=C
+export LANG
+export ORACLE_TERM=hftc
+export MOZILLA_HOME=/fsdevelop2/product/netscape
+export HOME=/fsdevelop2/product/express63
+export ORACLE_HOME=/fsdevelop2/product/express63
+export OLAP_HOME=/fsdevelop2/product/express63/olap
+export ORACLE_OWNER=$HOME
+export PATH=$PATH:$ORACLE_HOME/bin:$OLAP_HOME/bin:/fsdevelop2/product/netscape
+export LIBPATH=$OLAP_HOME/lib:$ORACLE_HOME/lib
+
+
+set -o vi
+
+PS1='$LOGNAME'"@"`hostname`:'$PWD > '
+
+alias ll="ls -lisa"
+alias dev="cd /fsdevelop2"
+alias rm="rm -i"
+alias c="clear"
+alias monitor="/usr/local/bin/monitor"

@@ -1,0 +1,20 @@
+################################################
+#                    A.BOUR                    #
+#                     v1.0                     #
+#                   19/03/02                   #
+#       Correspondance appli/code appli.       #
+################################################
+
+ii Tiers
+cv Corail
+mc GPO
+sk Samkhya
+ta Triple'A
+ao AGF
+sc Emeraude
+af Cristal
+td,tb,sl,tc,kf Crips/Stelink
+te CBKI
+co,cs,ct DPO
+bs,rj,sd,sm Compta
+cu Capa

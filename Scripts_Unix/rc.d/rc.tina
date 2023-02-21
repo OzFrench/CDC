@@ -1,0 +1,45 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start du deamon TINA
+# A LANCER en ROOT
+# Auteur: Jerome HABELSKI
+# Date: 26/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+HOST=`hostname`
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+. /$HOST/product/tina/.tina.sh
+
+START_MQM="Demarrage du deamon TINA"
+STOP_MQM="Arret du deamon TINA"
+
+START_BIN=/$HOST/product/tina/Bin/tina_daemon
+STOP_BIN=/$HOST/product/tina/Bin/tina_stop
+
+case "$1" in
+    'start')
+        if [ -f "$START_BIN" ]
+		then
+            echo $START_MQM
+       	    $START_BIN & >/dev/console
+	fi
+        ;;
+    'stop')
+        if [ -f "$STOP_BIN" ]
+		then
+            echo $STOP_MQM
+            $STOP_BIN & >/dev/console
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

@@ -1,0 +1,44 @@
+df -k|egrep -v "Mounted|:|proc"|awk '{print $2 " " $3 }'|awk 'BEGIN {CUMUL=0;CUMUL1=0} {CUMUL=CUMUL+$2/1000;CUMUL1=CUMUL1+$3/1000}
+END { 
+printf "TOTAL DISPO GO\t\t %.1f\n",CUMUL/1000 }' > /exploit/log/stockage2
+#
+rm rstock
+#
+# CALCUL DU TOTAL PPS ET DU FREE PPS EN UTILISANT LA COMMANDE LSVG
+#
+#for LSVG in `lsvg|egrep -v "alt|rootvg|128|64" `
+for LSVG in `lsvg|grep "sap" `
+do
+	`lsvg $LSVG > rlsvg`
+	val=`lsvg $LSVG` | awk ' $0 ~/TOTAL PPs/ {
+				ligne=$0;
+				lgl=length(ligne);
+				po=index(ligne,"(")+1;
+				pf=index(ligne,"mega");
+				vt=substr(ligne,po,pf-po);
+				}
+				$0 ~/FREE PPs/ {
+				ligne=$0;
+				lgl=length(ligne);
+				po=index(ligne,"(")+1;
+				pf=index(ligne,"mega");
+				vf=substr(ligne,po,pf-po);
+				}
+				END { print "'$LSVG'\t" vt "\t" vf }
+				'vlsvg=$LSVG rlsvg >> rstock
+done
+awk 'BEGIN { totpps=0;frepps=0 }
+        {totpps+=$2;frepps+=$3
+	print $1":"
+        printf "DISQUE GO\t\t %.1f\n",$2/1000 ; printf "ALLOUE GO\t\t %.1f\n",($2-$3)/1000 ; printf "NON ALLOUE GO\t\t %.1f\n",$3/1000} 
+        END {
+	 print "TOTAL: "
+	  printf "DISQUE GO\t\t %.1f\n",totpps/1000 ; printf  "ALLOUE GO\t\t %.1f\n",(totpps-frepps)/1000 ; printf "NON ALLOUE GO\t\t %.1f\n",frepps/1000}' rstock 
+# >>/exploit/log/stockage2
+
+LIGNE1=$(tail -4l /exploit/log/stockage2 | head -n 1)
+LIGNE2=$(tail -3l /exploit/log/stockage2 | head -n 1)
+LIGNE3=$(tail -2l /exploit/log/stockage2 | head -n 1)
+LIGNE4=$(tail -1l /exploit/log/stockage2 | head -n 1)
+echo "$LIGNE2" > /exploit/log/stockage
+echo "$LIGNE1" >> /exploit/log/stockage

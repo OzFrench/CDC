@@ -1,0 +1,1034 @@
+AAA;AIX;4.3.3.78
+AAA;build;AIX433
+AAA;command;/usr/bin/nmon -s 30 -c 6 -f -t 
+AAA;cpus;4;4
+AAA;date;28/11/03
+AAA;disks_per_line;150
+AAA;hardware;Architecture PowerPC Implementation RS64-III 64 bit
+AAA;host;fsdevelop2
+AAA;interval;30
+AAA;note0; Warning - use the UNIX sort command to order this file before loading into a spreadsheet
+AAA;note1; The First Column is simply to get the output sorted in the right order
+AAA;note2; The T0001-T9999 column is a snapshot number. To work out the actual time; see the ZZZ section at the end
+AAA;progname;nmon
+AAA;runname;fsdevelop2
+AAA;snapshots;6
+AAA;time;10:59.11
+AAA;user;fsouvanA
+AAA;version;v9a
+BBBB;000;hdisk0;18.20;SCSI
+BBBB;001;hdisk3;36.44;SSA
+BBBB;002;hdisk7;18.22;SSA
+BBBB;003;hdisk4;36.44;SSA
+BBBB;004;hdisk2;36.44;SSA
+BBBB;005;hdisk10;18.22;SSA
+BBBB;006;hdisk6;109.34;SSA
+BBBB;007;hdisk5;72.89;SSA
+BBBB;008;hdisk9;18.22;SSA
+BBBB;009;cd0;0.65;unknown
+BBBB;010;hdisk11;18.20;SCSI
+BBBB;011;hdisk8;9.11;SSA
+BBBC;000;hdisk0:
+BBBC;001;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;002;hd5                   1     1     01..00..00..00..00    N/A
+BBBC;003;hd2                   306   306   108..00..42..86..70   /usr
+BBBC;004;hd6                   64    64    00..64..00..00..00    N/A
+BBBC;005;sysdumplv01           15    15    00..15..00..00..00    /dump
+BBBC;006;hd4                   46    46    00..28..01..17..00    /
+BBBC;007;hd1                   63    63    00..01..26..05..31    /home
+BBBC;008;hd8                   1     1     00..00..01..00..00    N/A
+BBBC;009;hd9var                4     4     00..00..02..00..02    /var
+BBBC;010;hd3                   10    10    00..00..04..00..06    /tmp
+BBBC;011;paging00              32    32    00..00..32..00..00    N/A
+BBBC;012;hdisk3:
+BBBC;013;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;014;lvdump01              445   445   109..109..108..108..11 /fsdevelop2/sybase/dumps
+BBBC;015;lvdump02              93    93    00..00..00..00..93    /fsdevelop2/oracle/dumps
+BBBC;016;lvessbase03           1     1     00..00..00..00..01    /fsdevelop2/essbase
+BBBC;017;lvexpresstmp01        2     2     00..00..00..00..02    /fsdevelop2/express/tmp
+BBBC;018;lvexpexadm01          1     1     00..00..00..00..01    /fsdevelop2/express/exadm
+BBBC;019;loglv01               1     1     00..00..00..00..01    N/A
+BBBC;020;hdisk7:
+BBBC;021;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;022;dev6542lv             312   312   109..33..44..108..18  /dev6542
+BBBC;023;FS_SV_WE-data5        2     2     00..02..00..00..00    N/A
+BBBC;024;FS_SV_WE-log5         2     2     00..02..00..00..00    N/A
+BBBC;025;FS_SV_CK1-maste       4     4     00..04..00..00..00    N/A
+BBBC;026;FS_SV_CK1-ps1         4     4     00..04..00..00..00    N/A
+BBBC;027;FS_SV_CK1-tempd       4     4     00..04..00..00..00    N/A
+BBBC;028;FS_SV_CK1-data1       4     4     00..04..00..00..00    N/A
+BBBC;029;FS_SV_CK1-log1        2     2     00..02..00..00..00    N/A
+BBBC;030;FS_SV_ET-master       4     4     00..04..00..00..00    N/A
+BBBC;031;FS_SV_ET-ps1          4     4     00..04..00..00..00    N/A
+BBBC;032;FS_SV_ET-tempdb       4     4     00..04..00..00..00    N/A
+BBBC;033;FS_SV_ET-data1        10    10    00..10..00..00..00    N/A
+BBBC;034;FS_SV_ET-log1         4     4     00..04..00..00..00    N/A
+BBBC;035;FS_SV_JE0-data1       2     2     00..02..00..00..00    N/A
+BBBC;036;FS_SV_JE0-log1        1     1     00..01..00..00..00    N/A
+BBBC;037;FS_SV_ET-data2        4     4     00..04..00..00..00    N/A
+BBBC;038;FS_SV_ET-log2         2     2     00..02..00..00..00    N/A
+BBBC;039;FS_SV_RS-dat5         4     4     00..04..00..00..00    N/A
+BBBC;040;FS_SV_RS-log3         2     2     00..02..00..00..00    N/A
+BBBC;041;FS_SV_JE0-data2       8     8     00..08..00..00..00    N/A
+BBBC;042;FS_SV_JE0-log2        4     4     00..04..00..00..00    N/A
+BBBC;043;paging01              64    64    00..00..64..00..00    N/A
+BBBC;044;loglv03               1     1     00..00..00..00..01    N/A
+BBBC;045;hdisk4:
+BBBC;046;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;047;FS_SV_GO-tempdb       1     1     01..00..00..00..00    N/A
+BBBC;048;FS_SV_GO-pd1          2     2     02..00..00..00..00    N/A
+BBBC;049;FS_SV_GO-master       2     2     02..00..00..00..00    N/A
+BBBC;050;lvappli01             141   141   15..03..25..36..62    /fsdevelop2/dev
+BBBC;051;FS_SV_OD-log1         1     1     01..00..00..00..00    N/A
+BBBC;052;FS_SV_OD-tempdb       2     2     02..00..00..00..00    N/A
+BBBC;053;FS_SV_OD-ps1          2     2     02..00..00..00..00    N/A
+BBBC;054;FS_SV_OD-master       2     2     02..00..00..00..00    N/A
+BBBC;055;FS_SV_CD-log1         1     1     01..00..00..00..00    N/A
+BBBC;056;FS_SV_CD-data1        2     2     02..00..00..00..00    N/A
+BBBC;057;FS_SV_CD-tempdb       2     2     02..00..00..00..00    N/A
+BBBC;058;FS_SV_CD-ps1          2     2     02..00..00..00..00    N/A
+BBBC;059;FS_SV_CD-master       2     2     02..00..00..00..00    N/A
+BBBC;060;FS_SV_AF-log3         1     1     01..00..00..00..00    N/A
+BBBC;061;FS_SV_AF-dat1         1     1     01..00..00..00..00    N/A
+BBBC;062;FS_SV_RS-dat2         2     2     02..00..00..00..00    N/A
+BBBC;063;FS_SV_RS-dat1         2     2     02..00..00..00..00    N/A
+BBBC;064;FS_SV_RS-log1         2     2     02..00..00..00..00    N/A
+BBBC;065;FS_SV_RS-tempdb       2     2     02..00..00..00..00    N/A
+BBBC;066;FS_SV_RS-ps1          2     2     02..00..00..00..00    N/A
+BBBC;067;FS_SV_RS-master       2     2     02..00..00..00..00    N/A
+BBBC;068;FS_SV_WE-log3         1     1     01..00..00..00..00    N/A
+BBBC;069;FS_SV_WE-data3        2     2     02..00..00..00..00    N/A
+BBBC;070;FS_SV_WE-log2         1     1     01..00..00..00..00    N/A
+BBBC;071;FS_SV_WE-data2        2     2     02..00..00..00..00    N/A
+BBBC;072;FS_SV_AF-log2         1     1     01..00..00..00..00    N/A
+BBBC;073;FS_SV_AF-data2        4     4     04..00..00..00..00    N/A
+BBBC;074;FS_SV_AF-log1         1     1     01..00..00..00..00    N/A
+BBBC;075;FS_SV_AF-data1        2     2     02..00..00..00..00    N/A
+BBBC;076;FS_SV_AF-tempd        2     2     02..00..00..00..00    N/A
+BBBC;077;FS_SV_AF-ps1          2     2     02..00..00..00..00    N/A
+BBBC;078;FS_SV_AF-maste        2     2     02..00..00..00..00    N/A
+BBBC;079;FS_SV_TA-log2         7     7     07..00..00..00..00    N/A
+BBBC;080;FS_SV_TA-dat2         23    23    23..00..00..00..00    N/A
+BBBC;081;FS_SV_TA-dat1         3     3     03..00..00..00..00    N/A
+BBBC;082;FS_SV_TA-tempdb       3     3     02..00..01..00..00    N/A
+BBBC;083;FS_SV_TA-ps1          2     2     02..00..00..00..00    N/A
+BBBC;084;FS_SV_TA-master       2     2     02..00..00..00..00    N/A
+BBBC;085;FS_SV_WE-master       2     2     00..02..00..00..00    N/A
+BBBC;086;FS_SV_WE-ps1          2     2     00..02..00..00..00    N/A
+BBBC;087;FS_SV_WE-tempdb       2     2     00..02..00..00..00    N/A
+BBBC;088;FS_SV_WE-data1        2     2     00..02..00..00..00    N/A
+BBBC;089;FS_SV_WE-log1         1     1     00..01..00..00..00    N/A
+BBBC;090;FS_SV_CS1-maste       2     2     00..02..00..00..00    N/A
+BBBC;091;FS_SV_CS1-ps1         2     2     00..02..00..00..00    N/A
+BBBC;092;FS_SV_CS1-tempd       2     2     00..02..00..00..00    N/A
+BBBC;093;FS_SV_CS1-data1       2     2     00..02..00..00..00    N/A
+BBBC;094;FS_SV_CS1-log1        1     1     00..01..00..00..00    N/A
+BBBC;095;FS_SV_CK0-maste       2     2     00..02..00..00..00    N/A
+BBBC;096;FS_SV_CK0-ps1         2     2     00..02..00..00..00    N/A
+BBBC;097;FS_SV_CK0-tempd       2     2     00..02..00..00..00    N/A
+BBBC;098;FS_SV_CK0-data1       2     2     00..02..00..00..00    N/A
+BBBC;099;FS_SV_CK0-log1        1     1     00..01..00..00..00    N/A
+BBBC;100;FS_SV_TA-log1         1     1     00..01..00..00..00    N/A
+BBBC;101;loglv02               1     1     00..01..00..00..00    N/A
+BBBC;102;lvoracle03            156   156   00..77..79..00..00    /fsdevelop2/oracle/data
+BBBC;103;FS_SV_GO-dat1         1     1     00..00..01..00..00    N/A
+BBBC;104;FS_SV_GO-log1         1     1     00..00..01..00..00    N/A
+BBBC;105;lveddie01             1     1     00..00..01..00..00    N/A
+BBBC;106;FS_SV_AF-data4        4     4     00..00..00..04..00    N/A
+BBBC;107;FS_SV_AF-data3        8     8     00..00..00..08..00    N/A
+BBBC;108;FS_SV_AF-log4         4     4     00..00..00..04..00    N/A
+BBBC;109;FS_SV_CD-data2        4     4     00..00..00..04..00    N/A
+BBBC;110;FS_SV_CD-log2         2     2     00..00..00..02..00    N/A
+BBBC;111;FS_SV_WE-data4        2     2     00..00..00..02..00    N/A
+BBBC;112;FS_SV_WE-log4         1     1     00..00..00..01..00    N/A
+BBBC;113;FS_SV_OD-data1        4     4     00..00..00..04..00    N/A
+BBBC;114;FS_SV_CD-data3        8     8     00..00..00..08..00    N/A
+BBBC;115;FS_SV_CD-log3         4     4     00..00..00..04..00    N/A
+BBBC;116;FS_SV_CB-master       2     2     00..00..00..02..00    N/A
+BBBC;117;FS_SV_CB-ps1          2     2     00..00..00..02..00    N/A
+BBBC;118;FS_SV_CB-tempdb       2     2     00..00..00..02..00    N/A
+BBBC;119;FS_SV_CB-data1        4     4     00..00..00..04..00    N/A
+BBBC;120;FS_SV_CB-log1         2     2     00..00..00..02..00    N/A
+BBBC;121;FS_SV_CB3-maste       2     2     00..00..00..02..00    N/A
+BBBC;122;FS_SV_CB3-ps1         2     2     00..00..00..02..00    N/A
+BBBC;123;FS_SV_CB3-tempd       2     2     00..00..00..02..00    N/A
+BBBC;124;FS_SV_CB3-data1       4     4     00..00..00..04..00    N/A
+BBBC;125;FS_SV_CB3-log1        2     2     00..00..00..02..00    N/A
+BBBC;126;FS_SV_OI-master       2     2     00..00..00..02..00    N/A
+BBBC;127;FS_SV_OI-ps1          2     2     00..00..00..02..00    N/A
+BBBC;128;FS_SV_OI-tempdb       2     2     00..00..00..02..00    N/A
+BBBC;129;FS_SV_OI-data1        2     2     00..00..00..01..01    N/A
+BBBC;130;FS_SV_OI-log1         2     2     00..00..00..00..02    N/A
+BBBC;131;FS_SV_QA-master       2     2     00..00..00..00..02    N/A
+BBBC;132;FS_SV_QA-tempdb       2     2     00..00..00..00..02    N/A
+BBBC;133;FS_SV_QA-ps1          2     2     00..00..00..00..02    N/A
+BBBC;134;FS_SV_QA-data1        5     5     00..00..00..00..05    N/A
+BBBC;135;FS_SV_QA-log1         3     3     00..00..00..00..03    N/A
+BBBC;136;FS_SV_RS-dat3         2     2     00..00..00..00..02    N/A
+BBBC;137;FS_SV_RS-log2         1     1     00..00..00..00..01    N/A
+BBBC;138;FS_SV_JE0-maste       2     2     00..00..00..00..02    N/A
+BBBC;139;FS_SV_JE0-ps1         2     2     00..00..00..00..02    N/A
+BBBC;140;FS_SV_JE0-tempd       2     2     00..00..00..00..02    N/A
+BBBC;141;FS_SV_CD-data4        8     8     00..00..00..00..08    N/A
+BBBC;142;FS_SV_CD-log4         4     4     00..00..00..00..04    N/A
+BBBC;143;FS_SV_RS-dat4         2     2     00..00..00..00..02    N/A
+BBBC;144;FS_SV_CK1-data2       1     1     00..00..00..00..01    N/A
+BBBC;145;FS_SV_CK1-log2        1     1     00..00..00..00..01    N/A
+BBBC;146;hdisk2:
+BBBC;147;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;148;lvmqm01               8     8     01..06..01..00..00    /fsdevelop2/product/mqm
+BBBC;149;lvfonction01          4     4     01..00..03..00..00    /fsdevelop2/product/fonction
+BBBC;150;lvoracle02            31    31    31..00..00..00..00    /fsdevelop2/oracle/oraadm
+BBBC;151;lvessbase01           11    11    02..00..04..05..00    /fsdevelop2/product/essbase
+BBBC;152;lvoracle01            63    63    25..00..38..00..00    /fsdevelop2/product/oracle
+BBBC;153;lvcrips01             13    13    13..00..00..00..00    /fsdevelop2/product/crips
+BBBC;154;lvessbase04           23    23    10..00..00..06..07    /fsdevelop2/essbase/dumps
+BBBC;155;FS_SV_TA2-log1        1     1     01..00..00..00..00    N/A
+BBBC;156;FS_SV_TA2-data1       3     3     03..00..00..00..00    N/A
+BBBC;157;FS_SV_TA2-tempd       3     3     03..00..00..00..00    N/A
+BBBC;158;FS_SV_TA2-ps1         2     2     02..00..00..00..00    N/A
+BBBC;159;FS_SV_TA2-maste       2     2     02..00..00..00..00    N/A
+BBBC;160;lvweb01               15    15    15..00..00..00..00    /fsdevelop2/product/websphere
+BBBC;161;lvsyb01               108   108   00..65..27..16..00    /fsdevelop2/product/sybase
+BBBC;162;lvsyb02               32    32    00..32..00..00..00    /fsdevelop2/sybase/sybadm
+BBBC;163;lvmercator01          3     3     00..01..00..02..00    /fsdevelop2/product/mercator
+BBBC;164;lvtina01              3     3     00..03..00..00..00    /fsdevelop2/product/tina
+BBBC;165;lvtuxedo01            2     2     00..01..01..00..00    /fsdevelop2/product/tuxedo
+BBBC;166;loglv00               1     1     00..01..00..00..00    N/A
+BBBC;167;FS_SV_TA2-data2       23    23    00..00..23..00..00    N/A
+BBBC;168;lvwas401              12    12    00..00..11..01..00    /fsdevelop2/product/was4
+BBBC;169;lvnetscape01          2     2     00..00..00..02..00    /fsdevelop2/product/netscape
+BBBC;170;lvdatastage01         6     6     00..00..00..06..00    /fsdevelop2/product/datastage
+BBBC;171;mercator651           3     3     00..00..00..03..00    /fsdevelop2/product/mercator651
+BBBC;172;FS_SV_TA2-log2        7     7     00..00..00..07..00    N/A
+BBBC;173;lvmerca6701           4     4     00..00..00..04..00    /fsdevelop2/product/merca67
+BBBC;174;lvinsure01            4     4     00..00..00..04..00    /fsdevelop2/product/insure
+BBBC;175;lvessbase02           2     2     00..00..00..02..00    /fsdevelop2/product/essbase2
+BBBC;176;lvessbase651          46    46    00..00..00..46..00    /fsdevelop2/product/essbase6.5.1
+BBBC;177;lvsyb03               40    40    00..00..00..04..36    /fsdevelop2/sybase/distrib
+BBBC;178;lvoas01               10    10    00..00..00..00..10    /fsdevelop2/product/oas4
+BBBC;179;lvexpress01           6     6     00..00..00..00..06    /fsdevelop2/product/express63
+BBBC;180;lvexpdata01           16    16    00..00..00..00..16    /fsdevelop2/express/data
+BBBC;181;paging02              16    16    00..00..00..00..16    N/A
+BBBC;182;lvessbase652          16    16    00..00..00..00..16    /fsdevelop2/product/essbase6.5.4.2
+BBBC;183;hdisk11:
+BBBC;184;LV NAME               LPs   PPs   DISTRIBUTION          MOUNT POINT
+BBBC;185;hd5                   1     1     01..00..00..00..00    N/A
+BBBC;186;hd2                   306   306   93..44..61..108..00   /usr
+BBBC;187;hd3                   10    10    10..00..00..00..00    /tmp
+BBBC;188;hd9var                4     4     04..00..00..00..00    /var
+BBBC;189;hd6                   64    64    00..64..00..00..00    N/A
+BBBC;190;hd8                   1     1     00..00..01..00..00    N/A
+BBBC;191;hd4                   46    46    00..00..46..00..00    /
+BBBC;192;hd1                   63    63    00..00..00..00..63    /home
+BBBC;193;paging00              32    32    00..00..00..00..32    N/A
+BBBC;194;hdisk0         0057a89aea243811    rootvg         
+BBBC;195;hdisk2         0057a89abea5b72c    productvg      
+BBBC;196;hdisk3         0057a89abec5471a    dumpvg         
+BBBC;197;hdisk4         0057a89abec5686c    rawdevvg       
+BBBC;198;hdisk5         0000b42a177ac44c    None           
+BBBC;199;hdisk6         0000b42a17897b3c    None           
+BBBC;200;hdisk7         0006304541adbbed    rawdevvg2      
+BBBC;201;hdisk8         0006304541af0e01    None           
+BBBC;202;hdisk9         0006304541af0453    None           
+BBBC;203;hdisk10        0006304541ab5048    None           
+BBBC;204;hdisk11        0057a89a59d35e7b    rootvg         
+BBBD;000;Disk Adapter Information fsdevelop2
+BBBD;001;Adapter_number;Name;Location; Description; Disks
+BBBD;002;0;'40-60;scsi0;Wide/Ultra-2 SCSI I/O Controller;hdisk0
+BBBD;003;1;'11-08;ssa0;IBM SSA 160 SerialRAID Adapter (14109100);hdisk2;hdisk3;hdisk4;hdisk5;hdisk6;hdisk7;hdisk8;hdisk9;hdisk10
+BBBD;004;2;'40-61;scsi1;Wide/Ultra-2 SCSI I/O Controller;hdisk11
+BBBP;000;vmtune
+BBBP;001;vmtune;vmtune:  current values:
+BBBP;002;vmtune;  -p       -P        -r          -R         -f       -F       -N        -W
+BBBP;003;vmtune;minperm  maxperm  minpgahead maxpgahead  minfree  maxfree  pd_npages maxrandwrt
+BBBP;004;vmtune; 314365  1257460       2          8        120      128     524288        0
+BBBP;005;vmtune;
+BBBP;006;vmtune;  -M      -w      -k      -c        -b         -B           -u        -l    -d
+BBBP;007;vmtune;maxpin npswarn npskill numclust numfsbufs hd_pbuf_cnt lvm_bufcnt lrubucket defps
+BBBP;008;vmtune;1258283   49152   12288       1      93        160          9      131072     1
+BBBP;009;vmtune;
+BBBP;010;vmtune;        -s              -n         -S         -L          -g           -h
+BBBP;011;vmtune;sync_release_ilock  nokilluid  v_pinshm  lgpg_regions  lgpg_size  strict_maxperm
+BBBP;012;vmtune;        0               0           0           0            0        0
+BBBP;013;vmtune;
+BBBP;014;vmtune;number of valid memory pages = 1572853	maxperm=79.9% of real memory
+BBBP;015;vmtune;maximum pinable=80.0% of real memory	minperm=20.0% of real memory
+BBBP;016;vmtune;number of file memory pages = 987095	numperm=62.8% of real memory
+BBBP;017;vmtune;
+BBBP;018;vmtune -a
+BBBP;019;vmtune -a;       hd_pendqblked = 4080133
+BBBP;020;vmtune -a;        psbufwaitcnt = 17146
+BBBP;021;vmtune -a;        fsbufwaitcnt = 4587678
+BBBP;022;vmtune -a;       rfsbufwaitcnt = 0
+BBBP;023;schedtune
+BBBP;024;schedtune;
+BBBP;025;schedtune;     THRASH           SUSP       FORK             SCHED
+BBBP;026;schedtune;-h    -p    -m      -w    -e      -f       -d       -r        -t       -s
+BBBP;027;schedtune;SYS  PROC  MULTI   WAIT  GRACE   TICKS   SCHED_D  SCHED_R  TIMESLICE MAXSPIN
+BBBP;028;schedtune; 0   4     2        1      2      10       16       16         1        16384
+BBBP;029;schedtune;
+BBBP;030;schedtune;   CLOCK   SCHED_FIFO2   IDLE MIGRATION   FIXED_PRI
+BBBP;031;schedtune;   -c          -a            -b              -F
+BBBP;032;schedtune;%usDELTA   AFFINITY_LIM  BARRIER/16       GLOBAL(1)
+BBBP;033;schedtune;  100           7             4               0
+BBBP;034;emstat
+BBBP;035;emstat;emstat total count emstat interval count
+BBBP;036;emstat;        414245          414245
+BBBP;037;emstat;        414245               0
+BBBP;038;emstat;        414245               0
+BBBP;039;lsattr -EL sys0
+BBBP;040;lsattr -EL sys0;keylock      normal        State of system keylock at boot time              False
+BBBP;041;lsattr -EL sys0;maxbuf       20            Maximum number of pages in block I/O BUFFER CACHE True
+BBBP;042;lsattr -EL sys0;maxmbuf      65536         Maximum Kbytes of real memory allowed for MBUFS   True
+BBBP;043;lsattr -EL sys0;maxuproc     500           Maximum number of PROCESSES allowed per user      True
+BBBP;044;lsattr -EL sys0;autorestart  false         Automatically REBOOT system after a crash         True
+BBBP;045;lsattr -EL sys0;iostat       true          Continuously maintain DISK I/O history            True
+BBBP;046;lsattr -EL sys0;realmem      6291456       Amount of usable physical memory in Kbytes        False
+BBBP;047;lsattr -EL sys0;conslogin    enable        System Console Login                              False
+BBBP;048;lsattr -EL sys0;fwversion    IBM;M2P01208  Firmware version and revision levels              False
+BBBP;049;lsattr -EL sys0;maxpout      0             HIGH water mark for pending write I/Os per file   True
+BBBP;050;lsattr -EL sys0;minpout      0             LOW water mark for pending write I/Os per file    True
+BBBP;051;lsattr -EL sys0;fullcore     false         Enable full CORE dump                             True
+BBBP;052;lsattr -EL sys0;pre430core   false         Use pre-430 style CORE dump                       True
+BBBP;053;lsattr -EL sys0;rtasversion  1             Open Firmware RTAS version                        False
+BBBP;054;lsattr -EL sys0;modelname    IBM;7026-6H1  Machine name                                      False
+BBBP;055;lsattr -EL sys0;systemid     IBM;01657A89A Hardware system identifier                        False
+BBBP;056;lsattr -EL sys0;boottype     disk          N/A                                               False
+BBBP;057;lsattr -EL sys0;SW_dist_intr false         Enable SW distribution of interrupts              True
+BBBP;058;lsattr -EL sys0;cpuguard     enable        CPU Guard                                         True
+BBBP;059;ipcs
+BBBP;060;ipcs;IPC status from /dev/mem as of Fri Nov 28 10:59:16 NFT 2003
+BBBP;061;ipcs;T        ID     KEY        MODE       OWNER    GROUP  CREATOR   CGROUP CBYTES  QNUM QBYTES LSPID LRPID   STIME    RTIME    CTIME 
+BBBP;062;ipcs;Message Queues:
+BBBP;063;ipcs;q         0 0x4107001c -Rrw-rw----     root   printq     root   printq        0        0  4194304     0     0 no-entry no-entry 13:21:55
+BBBP;064;ipcs;q         1 0xacea0207 -Rrw-rw-rw-     root    42832     root   system        0        0  4194304     0     0 no-entry no-entry 13:22:48
+BBBP;065;ipcs;q         2 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304 99678103992 18:30:01 18:30:01 14:08:14
+BBBP;066;ipcs;q         3 0xffffffff --rw-------      mqm      mqm      mqm      mqm      592        2  4194304103992 99678 18:30:03 17:30:01 14:08:14
+BBBP;067;ipcs;q         4 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304108108107850  9:38:57  9:38:57 14:08:41
+BBBP;068;ipcs;q         5 0xffffffff --rw-------      mqm      mqm      mqm      mqm      592        2  4194304107850108108  9:38:58  8:30:03 14:08:41
+BBBP;069;ipcs;q         6 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304111462111204 10:31:28 10:31:28 14:09:08
+BBBP;070;ipcs;q         7 0xffffffff --rw-------      mqm      mqm      mqm      mqm      296        1  4194304111204111462 10:31:29 10:31:27 14:09:08
+BBBP;071;ipcs;q         8 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304114820115364 10:31:34 10:31:34 14:09:44
+BBBP;072;ipcs;q         9 0xffffffff --rw-------      mqm      mqm      mqm      mqm      296        1  4194304115364114820 10:31:35 10:31:31 14:09:44
+BBBP;073;ipcs;q        10 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304141656143360 17:31:28 17:31:28 14:34:32
+BBBP;074;ipcs;q        11 0xffffffff --rw-------      mqm      mqm      mqm      mqm      592        2  4194304143360141656 17:31:30 16:31:30 14:34:32
+BBBP;075;ipcs;q        12 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304141014141158 18:31:38 18:31:38 14:34:59
+BBBP;076;ipcs;q        13 0xffffffff --rw-------      mqm      mqm      mqm      mqm      296        1  4194304141158141014 18:31:40 10:31:38 14:34:59
+BBBP;077;ipcs;q  26738702 0x0b000a04 -Rrw-rw-rw-     root    staff     root    staff        0        0  4194304162990162990 22:37:01 22:37:01 15:35:49
+BBBP;078;ipcs;q  12058639 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304215022253758  8:00:13  8:00:13  8:00:13
+BBBP;079;ipcs;q  11141136 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;080;ipcs;q  22937617 0xffffffff -Rrw------- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304 44830176488 11:30:32 11:30:32 11:30:21
+BBBP;081;ipcs;q   9175058 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;082;ipcs;q  11796499 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;083;ipcs;q  12714004 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;084;ipcs;q   7471125 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:16
+BBBP;085;ipcs;q   7208982 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;086;ipcs;q   7208983 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304244270246284  9:30:01  9:30:01  8:00:21
+BBBP;087;ipcs;q   9043992 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:16
+BBBP;088;ipcs;q   6946841 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690104994  9:19:00  9:19:00  8:00:13
+BBBP;089;ipcs;q   5373978 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770 87792 10:59:07 10:59:07  8:00:20
+BBBP;090;ipcs;q   5373979 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690255494  9:32:02  9:32:02  8:00:18
+BBBP;091;ipcs;q   5767196 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770258778 10:59:03 10:59:03  8:00:16
+BBBP;092;ipcs;q   5373981 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494158138  9:00:28  9:00:28  8:00:19
+BBBP;093;ipcs;q   5505054 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690229362  9:32:02  9:32:02  8:00:23
+BBBP;094;ipcs;q   5373983 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304 87792158138  9:00:28  9:00:28  8:00:19
+BBBP;095;ipcs;q   5505056 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494219990  9:26:02  9:26:02  8:00:28
+BBBP;096;ipcs;q   5373985 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:25
+BBBP;097;ipcs;q   7208994 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:13
+BBBP;098;ipcs;q   5505059 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:27
+BBBP;099;ipcs;q   5636132 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:40
+BBBP;100;ipcs;q   5505061 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770 79198 10:59:03 10:59:03  8:00:29
+BBBP;101;ipcs;q   5505062 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:32
+BBBP;102;ipcs;q   5505063 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770218690 10:59:07 10:59:07  8:00:30
+BBBP;103;ipcs;q   5636136 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304219990270616  9:26:02  9:26:02  8:00:42
+BBBP;104;ipcs;q   5505065 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:31
+BBBP;105;ipcs;q   5636138 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304227016154194 10:58:02 10:58:02  8:00:43
+BBBP;106;ipcs;q   5505067 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770143218 10:59:15 10:59:15  8:00:37
+BBBP;107;ipcs;q   5505068 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:34
+BBBP;108;ipcs;q   5505069 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:33
+BBBP;109;ipcs;q   5767214 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304245250 87792 10:59:07 10:59:07  8:00:20
+BBBP;110;ipcs;q   5373999 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:31
+BBBP;111;ipcs;q   5374000 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:32
+BBBP;112;ipcs;q   5505073 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304161894154194 10:58:02 10:58:02  8:00:43
+BBBP;113;ipcs;q   5374002 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:33
+BBBP;114;ipcs;q   5505075 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:42
+BBBP;115;ipcs;q   5767220 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304104994 46556  8:58:50  8:58:50  8:00:24
+BBBP;116;ipcs;q   5374005 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:41
+BBBP;117;ipcs;q   5505078 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304 87792226520  9:26:02  9:26:02  8:00:18
+BBBP;118;ipcs;q   5505079 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:16
+BBBP;119;ipcs;q   5767224 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494254154  9:19:00  9:19:00  8:00:26
+BBBP;120;ipcs;q   5636153 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494246284  9:19:01  9:19:01  8:00:21
+BBBP;121;ipcs;q   5505082 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:45
+BBBP;122;ipcs;q   5636155 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:23
+BBBP;123;ipcs;q   5505084 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770240582  8:00:23  8:00:23  8:00:22
+BBBP;124;ipcs;q   5636157 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304229362240582  9:19:00  9:19:00  8:00:22
+BBBP;125;ipcs;q   5374014 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304154194161894 10:58:02 10:58:02  8:00:45
+BBBP;126;ipcs;q   5636159 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690219990  9:26:01  9:26:01  8:00:28
+BBBP;127;ipcs;q  32505920 0x0000a412 -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304229362215022  9:32:02  9:32:02  8:00:12
+BBBP;128;ipcs;q   5374017 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304227016217268  8:59:51  8:59:51  8:00:45
+BBBP;129;ipcs;q   5374018 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304 79198 90310 10:59:03 10:59:03  8:00:52
+BBBP;130;ipcs;q   5374019 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:59:25
+BBBP;131;ipcs;q   5242948 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304258778190202 10:59:03 10:59:03  8:00:54
+BBBP;132;ipcs;q   5374021 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:53
+BBBP;133;ipcs;q   4194374 0xffffffff --rw-------      mqm      mqm      mqm      mqm        0        0  4194304     0     0 no-entry no-entry 17:49:01
+BBBP;134;ipcs;q   5374023 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304238770244270 10:31:00 10:31:00  8:00:49
+BBBP;135;ipcs;q   5242952 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690204966  8:00:52  8:00:52  8:00:51
+BBBP;136;ipcs;q   5374025 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304154194227016 10:58:02 10:58:02  8:00:52
+BBBP;137;ipcs;q   5374026 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304218690239794 10:59:07 10:59:07  8:00:54
+BBBP;138;ipcs;q   5374027 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304154194238182  8:58:47  8:58:47  8:00:46
+BBBP;139;ipcs;q   5242956 0xffffffff -Rrw-rw----   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:52
+BBBP;140;ipcs;q   5374029 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494238182  8:58:47  8:58:47  8:00:46
+BBBP;141;ipcs;q   7602256 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304143218238770 10:59:15 10:59:15  8:00:13
+BBBP;142;ipcs;q   5374033 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304255494222768  8:59:49  8:59:49  8:00:47
+BBBP;143;ipcs;q   5111890 0xffffffff --rw-rw----   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:52
+BBBP;144;ipcs;q   5111891 0xffffffff --rw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304     0     0 no-entry no-entry  8:00:45
+BBBP;145;ipcs;q   5898324 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304 87792245250 10:59:07 10:59:07  8:00:54
+BBBP;146;ipcs;q   9830485 0xffffffff --rw-------      mqm      mqm      mqm      mqm        0        0  4194304     0     0 no-entry no-entry 17:49:01
+BBBP;147;ipcs;q   7602262 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304244270156754  9:30:01  9:30:01  8:00:54
+BBBP;148;ipcs;q   4456535 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304204966215930  8:00:51  8:00:51  8:00:50
+BBBP;149;ipcs;q        88 0xffffffff -Rrw-------      mqm      mqm      mqm      mqm        0        0  4194304     0     0 no-entry no-entry 18:10:31
+BBBP;150;ipcs;q        89 0xffffffff --rw-------      mqm      mqm      mqm      mqm        0        0  4194304     0     0 no-entry no-entry 18:10:31
+BBBP;151;ipcs;q  11796570 0xffffffff -Rrw------- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304     0     0 no-entry no-entry 11:30:21
+BBBP;152;ipcs;q   1572955 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304143218244756 10:59:15 10:59:15  8:00:52
+BBBP;153;ipcs;q   1310812 0xffffffff --rw------- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304195444135470 11:30:33 11:30:33 11:30:17
+BBBP;154;ipcs;q   1572958 0xffffffff --rw------- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304     0     0 no-entry no-entry 11:30:21
+BBBP;155;ipcs;q    262239 0xffffffff --rw------- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304     0     0 no-entry no-entry 11:30:21
+BBBP;156;ipcs;q    262240 0xb556f071 --rw-rw--w- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304     0     0 no-entry no-entry 11:30:21
+BBBP;157;ipcs;q    131169 0xb556f072 -Rrw-rw--w- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304225370227944 20:00:33 20:00:33 11:30:21
+BBBP;158;ipcs;q    131170 0xb556f077 --rw-rw-r-- db2inst1  db2grp1 db2inst1  db2grp1        0        0  4194304227944225370 20:00:33 20:00:33 11:30:21
+BBBP;159;ipcs;q   2883683 0xffffffff -Rrw-rw-rw-   fcrips    crips   fcrips    crips        0        0  4194304154194222768  8:59:49  8:59:49  8:00:47
+BBBP;160;lscfg
+BBBP;161;lscfg;INSTALLED RESOURCE LIST
+BBBP;162;lscfg;
+BBBP;163;lscfg;The following resources are installed on the machine.
+BBBP;164;lscfg;+/- = Added or deleted from Resource List.
+BBBP;165;lscfg;*   = Diagnostic support not available.
+BBBP;166;lscfg;	
+BBBP;167;lscfg;  Model Architecture: chrp
+BBBP;168;lscfg;  Model Implementation: Multiple Processor; PCI bus
+BBBP;169;lscfg;	
+BBBP;170;lscfg;+ sys0              00-00             System Object
+BBBP;171;lscfg;+ sysplanar0        00-00             System Planar
+BBBP;172;lscfg;+ mem0              00-00             Memory
+BBBP;173;lscfg;+ proc0             00-00             Processor
+BBBP;174;lscfg;+ L2cache0          00-00             L2 Cache
+BBBP;175;lscfg;* pmc0              00-00             n/a
+BBBP;176;lscfg;+ proc2             00-02             Processor
+BBBP;177;lscfg;+ proc4             00-04             Processor
+BBBP;178;lscfg;+ proc6             00-06             Processor
+BBBP;179;lscfg;* pci2              00-fff7f08000     PCI Bus
+BBBP;180;lscfg;+ ent0              40-58             IBM 10/100 Mbps Ethernet PCI Adapter
+BBBP;181;lscfg;                                      (23100020)
+BBBP;182;lscfg;+ scsi0             40-60             Wide/Ultra-2 SCSI I/O Controller
+BBBP;183;lscfg;+ cd0               40-60-00-1;0      16 Bit SCSI Multimedia CD-ROM Drive
+BBBP;184;lscfg;                                      (650 MB)
+BBBP;185;lscfg;+ hdisk0            40-60-00-4;0      16 Bit LVD SCSI Disk Drive (18200
+BBBP;186;lscfg;                                      MB)
+BBBP;187;lscfg;+ scsi1             40-61             Wide/Ultra-2 SCSI I/O Controller
+BBBP;188;lscfg;+ hdisk11           40-61-00-8;0      16 Bit LVD SCSI Disk Drive (18200
+BBBP;189;lscfg;                                      MB)
+BBBP;190;lscfg;* pci0              00-fff7f09000     PCI Bus
+BBBP;191;lscfg;* isa0              10-80             ISA Bus
+BBBP;192;lscfg;+ fda0              01-D1             Standard I/O Diskette Adapter
+BBBP;193;lscfg;+ fd0               01-D1-00-00       Diskette Drive
+BBBP;194;lscfg;* siokma0           01-K1             Keyboard/Mouse Adapter
+BBBP;195;lscfg;+ sioka0            01-K1-00          Keyboard Adapter
+BBBP;196;lscfg;+ sioma0            01-K1-01          Mouse Adapter
+BBBP;197;lscfg;+ ppa0              01-R1             CHRP IEEE1284 (ECP) Parallel Port
+BBBP;198;lscfg;                                      Adapter
+BBBP;199;lscfg;+ sa0               01-S1             Standard I/O Serial Port
+BBBP;200;lscfg;+ tty0              01-S1-00-00       Asynchronous Terminal
+BBBP;201;lscfg;+ sa1               01-S2             Standard I/O Serial Port
+BBBP;202;lscfg;+ sa2               01-S3             Standard I/O Serial Port
+BBBP;203;lscfg;+ sa3               01-S4             Standard I/O Serial Port
+BBBP;204;lscfg;* pci3              10-58             PCI Bus
+BBBP;205;lscfg;+ ssa0              11-08             IBM SSA 160 SerialRAID Adapter
+BBBP;206;lscfg;                                      (14109100)
+BBBP;207;lscfg;* pci4              10-5a             PCI Bus
+BBBP;208;lscfg;* pci5              10-5c             PCI Bus
+BBBP;209;lscfg;* pci6              10-5e             PCI Bus
+BBBP;210;lscfg;* pci1              00-fff7f0a000     PCI Bus
+BBBP;211;lscfg;* pci7              20-58             PCI Bus
+BBBP;212;lscfg;* pci8              20-5a             PCI Bus
+BBBP;213;lscfg;* pci9              20-5b             PCI Bus
+BBBP;214;lscfg;* pci10             20-5c             PCI Bus
+BBBP;215;lscfg;* pci11             20-5e             PCI Bus
+BBBP;216;lscfg;* pci12             20-60             PCI Bus
+BBBP;217;lscfg;* pci13             20-62             PCI Bus
+BBBP;218;lscfg;* pci14             20-63             PCI Bus
+BBBP;219;lscfg;* pci15             20-64             PCI Bus
+BBBP;220;lscfg;* pci16             20-66             PCI Bus
+BBBP;221;lscfg;+ enclosure0        00-00-1E87        SSA Enclosure
+BBBP;222;lscfg;* hdisk2            11-08-L           SSA Logical Disk Drive
+BBBP;223;lscfg;* hdisk3            11-08-L           SSA Logical Disk Drive
+BBBP;224;lscfg;* hdisk4            11-08-L           SSA Logical Disk Drive
+BBBP;225;lscfg;* hdisk5            11-08-L           SSA Logical Disk Drive
+BBBP;226;lscfg;* hdisk6            11-08-L           SSA Logical Disk Drive
+BBBP;227;lscfg;* hdisk7            11-08-L           SSA Logical Disk Drive
+BBBP;228;lscfg;* hdisk8            11-08-L           SSA Logical Disk Drive
+BBBP;229;lscfg;* hdisk9            11-08-L           SSA Logical Disk Drive
+BBBP;230;lscfg;* hdisk10           11-08-L           SSA Logical Disk Drive
+BBBP;231;lscfg;+ pdisk16           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;232;lscfg;+ pdisk17           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;233;lscfg;+ pdisk18           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;234;lscfg;+ pdisk19           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;235;lscfg;+ pdisk20           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;236;lscfg;+ pdisk21           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;237;lscfg;+ pdisk22           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;238;lscfg;+ pdisk23           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;239;lscfg;+ pdisk24           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;240;lscfg;+ pdisk25           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;241;lscfg;+ pdisk26           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;242;lscfg;+ pdisk27           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;243;lscfg;+ pdisk28           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;244;lscfg;+ pdisk29           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;245;lscfg;+ pdisk30           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;246;lscfg;+ pdisk31           11-08-P           9.1GB SSA C Physical Disk Drive
+BBBP;247;lscfg;+ pdisk7            11-08-1E87-01-P   SSA160 Physical Disk Drive (36400
+BBBP;248;lscfg;                                      MB)
+BBBP;249;lscfg;+ pdisk5            11-08-1E87-02-P   SSA160 Physical Disk Drive (36400
+BBBP;250;lscfg;                                      MB)
+BBBP;251;lscfg;+ pdisk4            11-08-1E87-03-P   SSA160 Physical Disk Drive (36400
+BBBP;252;lscfg;                                      MB)
+BBBP;253;lscfg;+ pdisk2            11-08-1E87-04-P   SSA160 Physical Disk Drive (36400
+BBBP;254;lscfg;                                      MB)
+BBBP;255;lscfg;+ pdisk0            11-08-1E87-05-P   SSA160 Physical Disk Drive (36400
+BBBP;256;lscfg;                                      MB)
+BBBP;257;lscfg;+ pdisk3            11-08-1E87-06-P   SSA160 Physical Disk Drive (36400
+BBBP;258;lscfg;                                      MB)
+BBBP;259;lscfg;+ pdisk6            11-08-1E87-07-P   SSA160 Physical Disk Drive (36400
+BBBP;260;lscfg;                                      MB)
+BBBP;261;lsconf
+BBBP;262;lsconf;System Model: IBM;7026-6H1
+BBBP;263;lsconf;Processor Type:  PowerPC_RS64-III
+BBBP;264;lsconf;Number Of Processors:        4
+BBBP;265;lsconf;Memory Size: 6144MB
+BBBP;266;lsconf;Good Memory Size: 6144MB
+BBBP;267;lsconf;Firmware Version: IBM;M2P01208
+BBBP;268;lsconf;Console Login: enable
+BBBP;269;lsconf;Auto Restart: false
+BBBP;270;lsconf;Full Core: false
+BBBP;271;lsconf; 
+BBBP;272;lsconf;Network Information
+BBBP;273;lsconf;	Host Name: fsdevelop2
+BBBP;274;lsconf;	IP Address: 10.9.126.69
+BBBP;275;lsconf;	Sub Netmask: 255.255.255.0
+BBBP;276;lsconf;	Gateway: 10.9.126.1
+BBBP;277;lsconf;	Name Server: 
+BBBP;278;lsconf;	Domain Name: 
+BBBP;279;lsconf; 
+BBBP;280;lsconf;Paging Space Information
+BBBP;281;lsconf;	Total Paging Space: 6144MB
+BBBP;282;lsconf;	Percent Used: 51%
+BBBP;283;lsconf; 
+BBBP;284;lsconf;Volume Groups Information
+BBBP;285;lsconf;============================================================================== 
+BBBP;286;lsconf;rootvg:
+BBBP;287;lsconf;PV_NAME           PV STATE    TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+BBBP;288;lsconf;hdisk0            active      542         0           00..00..00..00..00
+BBBP;289;lsconf;hdisk11           active      542         15          01..00..00..00..14
+BBBP;290;lsconf;============================================================================== 
+BBBP;291;lsconf; 
+BBBP;292;lsconf;productvg:
+BBBP;293;lsconf;PV_NAME           PV STATE    TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+BBBP;294;lsconf;hdisk2            active      543         2           00..00..00..00..02
+BBBP;295;lsconf;============================================================================== 
+BBBP;296;lsconf; 
+BBBP;297;lsconf;dumpvg:
+BBBP;298;lsconf;PV_NAME           PV STATE    TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+BBBP;299;lsconf;hdisk3            active      543         0           00..00..00..00..00
+BBBP;300;lsconf;============================================================================== 
+BBBP;301;lsconf; 
+BBBP;302;lsconf;rawdevvg:
+BBBP;303;lsconf;PV_NAME           PV STATE    TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+BBBP;304;lsconf;hdisk4            active      543         5           00..00..00..00..05
+BBBP;305;lsconf;============================================================================== 
+BBBP;306;lsconf; 
+BBBP;307;lsconf;rawdevvg2:
+BBBP;308;lsconf;PV_NAME           PV STATE    TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+BBBP;309;lsconf;hdisk7            active      542         90          00..00..00..00..90
+BBBP;310;lsconf;============================================================================== 
+BBBP;311;lsconf; 
+BBBP;312;lsconf;INSTALLED RESOURCE LIST
+BBBP;313;lsconf;
+BBBP;314;lsconf;The following resources are installed on the machine.
+BBBP;315;lsconf;+/- = Added or deleted from Resource List.
+BBBP;316;lsconf;*   = Diagnostic support not available.
+BBBP;317;lsconf;	
+BBBP;318;lsconf;  Model Architecture: chrp
+BBBP;319;lsconf;  Model Implementation: Multiple Processor; PCI bus
+BBBP;320;lsconf;	
+BBBP;321;lsconf;+ sys0              00-00             System Object
+BBBP;322;lsconf;+ sysplanar0        00-00             System Planar
+BBBP;323;lsconf;+ mem0              00-00             Memory
+BBBP;324;lsconf;+ proc0             00-00             Processor
+BBBP;325;lsconf;+ L2cache0          00-00             L2 Cache
+BBBP;326;lsconf;* pmc0              00-00             n/a
+BBBP;327;lsconf;+ proc2             00-02             Processor
+BBBP;328;lsconf;+ proc4             00-04             Processor
+BBBP;329;lsconf;+ proc6             00-06             Processor
+BBBP;330;lsconf;* pci2              00-fff7f08000     PCI Bus
+BBBP;331;lsconf;+ ent0              40-58             IBM 10/100 Mbps Ethernet PCI Adapter
+BBBP;332;lsconf;                                      (23100020)
+BBBP;333;lsconf;+ scsi0             40-60             Wide/Ultra-2 SCSI I/O Controller
+BBBP;334;lsconf;+ cd0               40-60-00-1;0      16 Bit SCSI Multimedia CD-ROM Drive
+BBBP;335;lsconf;                                      (650 MB)
+BBBP;336;lsconf;+ hdisk0            40-60-00-4;0      16 Bit LVD SCSI Disk Drive (18200
+BBBP;337;lsconf;                                      MB)
+BBBP;338;lsconf;+ scsi1             40-61             Wide/Ultra-2 SCSI I/O Controller
+BBBP;339;lsconf;+ hdisk11           40-61-00-8;0      16 Bit LVD SCSI Disk Drive (18200
+BBBP;340;lsconf;                                      MB)
+BBBP;341;lsconf;* pci0              00-fff7f09000     PCI Bus
+BBBP;342;lsconf;* isa0              10-80             ISA Bus
+BBBP;343;lsconf;+ fda0              01-D1             Standard I/O Diskette Adapter
+BBBP;344;lsconf;+ fd0               01-D1-00-00       Diskette Drive
+BBBP;345;lsconf;* siokma0           01-K1             Keyboard/Mouse Adapter
+BBBP;346;lsconf;+ sioka0            01-K1-00          Keyboard Adapter
+BBBP;347;lsconf;+ sioma0            01-K1-01          Mouse Adapter
+BBBP;348;lsconf;+ ppa0              01-R1             CHRP IEEE1284 (ECP) Parallel Port
+BBBP;349;lsconf;                                      Adapter
+BBBP;350;lsconf;+ sa0               01-S1             Standard I/O Serial Port
+BBBP;351;lsconf;+ tty0              01-S1-00-00       Asynchronous Terminal
+BBBP;352;lsconf;+ sa1               01-S2             Standard I/O Serial Port
+BBBP;353;lsconf;+ sa2               01-S3             Standard I/O Serial Port
+BBBP;354;lsconf;+ sa3               01-S4             Standard I/O Serial Port
+BBBP;355;lsconf;* pci3              10-58             PCI Bus
+BBBP;356;lsconf;+ ssa0              11-08             IBM SSA 160 SerialRAID Adapter
+BBBP;357;lsconf;                                      (14109100)
+BBBP;358;lsconf;* pci4              10-5a             PCI Bus
+BBBP;359;lsconf;* pci5              10-5c             PCI Bus
+BBBP;360;lsconf;* pci6              10-5e             PCI Bus
+BBBP;361;lsconf;* pci1              00-fff7f0a000     PCI Bus
+BBBP;362;lsps
+BBBP;363;lsps;Page Space  Physical Volume   Volume Group    Size   %Used  Active  Auto  Type
+BBBP;364;lsps;paging02    hdisk2            productvg     1024MB      75     yes   yes    lv
+BBBP;365;lsps;paging01    hdisk7            rawdevvg2     2048MB      40     yes   yes    lv
+BBBP;366;lsps;paging00    hdisk0            rootvg        1024MB      75     yes   yes    lv
+BBBP;367;lsps;hd6         hdisk0            rootvg        2048MB      40     yes   yes    lv
+BBBP;368;vmo
+BBBP;369;ioo
+BBBP;370;schedo
+BBBP;371;nfso
+BBBP;372;no
+BBBP;373;vmstat -v
+BBBP;374;vmstat -s
+BBBP;375;vmstat -s; 2937422552 total address trans. faults
+BBBP;376;vmstat -s;  108061240 page ins
+BBBP;377;vmstat -s;  178038720 page outs
+BBBP;378;vmstat -s;    2487497 paging space page ins
+BBBP;379;vmstat -s;    3797675 paging space page outs
+BBBP;380;vmstat -s;          0 total reclaims
+BBBP;381;vmstat -s;  991226621 zero filled pages faults
+BBBP;382;vmstat -s;     956987 executable filled pages faults
+BBBP;383;vmstat -s;  398907011 pages examined by clock
+BBBP;384;vmstat -s;        266 revolutions of the clock hand
+BBBP;385;vmstat -s;  126027427 pages freed by the clock
+BBBP;386;vmstat -s;    2377987 backtracks
+BBBP;387;vmstat -s;          0 lock misses
+BBBP;388;vmstat -s;    1908086 free frame waits
+BBBP;389;vmstat -s;         10 extend XPT waits
+BBBP;390;vmstat -s;   21832953 pending I/O waits
+BBBP;391;vmstat -s;   96514676 start I/Os
+BBBP;392;vmstat -s;   96514675 iodones
+BBBP;393;vmstat -s;  310742258 cpu context switches
+BBBP;394;vmstat -s; 1283799926 device interrupts
+BBBP;395;vmstat -s;          0 software interrupts
+BBBP;396;vmstat -s;          0 traps
+BBBP;397;vmstat -s;  917276659 syscalls
+BBBP;398;nfsstat -m
+BBBP;399;nfsstat -n
+BBBP;400;nfsstat -n;
+BBBP;401;nfsstat -n;Server nfs:
+BBBP;402;nfsstat -n;calls      badcalls   public_v2  public_v3  
+BBBP;403;nfsstat -n;11925244   0          0          0          
+BBBP;404;nfsstat -n;Version 2: (0 calls)
+BBBP;405;nfsstat -n;null       getattr    setattr    root       lookup     readlink   read       
+BBBP;406;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;407;nfsstat -n;wrcache    write      create     remove     rename     link       symlink    
+BBBP;408;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;409;nfsstat -n;mkdir      rmdir      readdir    statfs     
+BBBP;410;nfsstat -n;0 0%       0 0%       0 0%       0 0%       
+BBBP;411;nfsstat -n;Version 3: (11925244 calls)
+BBBP;412;nfsstat -n;null       getattr    setattr    lookup     access     readlink   read       
+BBBP;413;nfsstat -n;20 0%      497411 4%  20084 0%   572333 4%  409899 3%  33 0%      2354880 19% 
+BBBP;414;nfsstat -n;write      create     mkdir      symlink    mknod      remove     rmdir      
+BBBP;415;nfsstat -n;5578577 46% 18434 0%  210 0%     0 0%       0 0%       16348 0%   109 0%     
+BBBP;416;nfsstat -n;rename     link       readdir    readdir+   fsstat     fsinfo     pathconf   
+BBBP;417;nfsstat -n;12106 0%   0 0%       6744 0%    202734 1%  1705423 14% 18 0%     15 0%      
+BBBP;418;nfsstat -n;commit     
+BBBP;419;nfsstat -n;529866 4%  
+BBBP;420;nfsstat -n;
+BBBP;421;nfsstat -n;Client nfs:
+BBBP;422;nfsstat -n;calls      badcalls   clgets     cltoomany  
+BBBP;423;nfsstat -n;0          0          0          0          
+BBBP;424;nfsstat -n;Version 2: (0 calls)
+BBBP;425;nfsstat -n;null       getattr    setattr    root       lookup     readlink   read       
+BBBP;426;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;427;nfsstat -n;wrcache    write      create     remove     rename     link       symlink    
+BBBP;428;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;429;nfsstat -n;mkdir      rmdir      readdir    statfs     
+BBBP;430;nfsstat -n;0 0%       0 0%       0 0%       0 0%       
+BBBP;431;nfsstat -n;Version 3: (0 calls)
+BBBP;432;nfsstat -n;null       getattr    setattr    lookup     access     readlink   read       
+BBBP;433;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;434;nfsstat -n;write      create     mkdir      symlink    mknod      remove     rmdir      
+BBBP;435;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;436;nfsstat -n;rename     link       readdir    readdir+   fsstat     fsinfo     pathconf   
+BBBP;437;nfsstat -n;0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       0 0%       
+BBBP;438;nfsstat -n;commit     
+BBBP;439;nfsstat -n;0 0%       
+BBBP;440;WLMclasses
+BBBP;441;WLMclasses;* IBM_PROLOG_BEGIN_TAG 
+BBBP;442;WLMclasses;* This is an automatically generated prolog. 
+BBBP;443;WLMclasses;*  
+BBBP;444;WLMclasses;* bos43N src/bos/etc/wlm/classes 1.1 
+BBBP;445;WLMclasses;*  
+BBBP;446;WLMclasses;* Licensed Materials - Property of IBM 
+BBBP;447;WLMclasses;*  
+BBBP;448;WLMclasses;* (C) COPYRIGHT International Business Machines Corp. 1999 
+BBBP;449;WLMclasses;* All Rights Reserved 
+BBBP;450;WLMclasses;*  
+BBBP;451;WLMclasses;* US Government Users Restricted Rights - Use; duplication or 
+BBBP;452;WLMclasses;* disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+BBBP;453;WLMclasses;*  
+BBBP;454;WLMclasses;* IBM_PROLOG_END_TAG 
+BBBP;455;WLMclasses;System:
+BBBP;456;WLMclasses;
+BBBP;457;WLMclasses;Default:
+BBBP;458;WLMrules
+BBBP;459;WLMrules;* IBM_PROLOG_BEGIN_TAG 
+BBBP;460;WLMrules;* This is an automatically generated prolog. 
+BBBP;461;WLMrules;*  
+BBBP;462;WLMrules;* bos43N src/bos/etc/wlm/rules 1.1 
+BBBP;463;WLMrules;*  
+BBBP;464;WLMrules;* Licensed Materials - Property of IBM 
+BBBP;465;WLMrules;*  
+BBBP;466;WLMrules;* (C) COPYRIGHT International Business Machines Corp. 1999 
+BBBP;467;WLMrules;* All Rights Reserved 
+BBBP;468;WLMrules;*  
+BBBP;469;WLMrules;* US Government Users Restricted Rights - Use; duplication or 
+BBBP;470;WLMrules;* disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+BBBP;471;WLMrules;*  
+BBBP;472;WLMrules;* IBM_PROLOG_END_TAG 
+BBBP;473;WLMrules;* class resvd user group application
+BBBP;474;WLMrules;System   -    root   -    -
+BBBP;475;WLMrules;Default  -    -      -    -
+BBBP;476;WLMlimits
+BBBP;477;WLMlimits;* IBM_PROLOG_BEGIN_TAG 
+BBBP;478;WLMlimits;* This is an automatically generated prolog. 
+BBBP;479;WLMlimits;*  
+BBBP;480;WLMlimits;* bos43N src/bos/etc/wlm/limits 1.1 
+BBBP;481;WLMlimits;*  
+BBBP;482;WLMlimits;* Licensed Materials - Property of IBM 
+BBBP;483;WLMlimits;*  
+BBBP;484;WLMlimits;* (C) COPYRIGHT International Business Machines Corp. 1999 
+BBBP;485;WLMlimits;* All Rights Reserved 
+BBBP;486;WLMlimits;*  
+BBBP;487;WLMlimits;* US Government Users Restricted Rights - Use; duplication or 
+BBBP;488;WLMlimits;* disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+BBBP;489;WLMlimits;*  
+BBBP;490;WLMlimits;* IBM_PROLOG_END_TAG 
+BBBP;491;WLMlimits;System:
+BBBP;492;WLMlimits;	memory = 1%-100%
+BBBP;493;WLMshares
+BBBP;494;WLMshares;* IBM_PROLOG_BEGIN_TAG 
+BBBP;495;WLMshares;* This is an automatically generated prolog. 
+BBBP;496;WLMshares;*  
+BBBP;497;WLMshares;* bos43N src/bos/etc/wlm/shares 1.1 
+BBBP;498;WLMshares;*  
+BBBP;499;WLMshares;* Licensed Materials - Property of IBM 
+BBBP;500;WLMshares;*  
+BBBP;501;WLMshares;* (C) COPYRIGHT International Business Machines Corp. 1999 
+BBBP;502;WLMshares;* All Rights Reserved 
+BBBP;503;WLMshares;*  
+BBBP;504;WLMshares;* US Government Users Restricted Rights - Use; duplication or 
+BBBP;505;WLMshares;* disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+BBBP;506;WLMshares;*  
+BBBP;507;WLMshares;* IBM_PROLOG_END_TAG 
+BBBP;508;vmtune -a
+BBBP;509;vmtune -a;       hd_pendqblked = 4080704
+BBBP;510;vmtune -a;        psbufwaitcnt = 17146
+BBBP;511;vmtune -a;        fsbufwaitcnt = 4587797
+BBBP;512;vmtune -a;       rfsbufwaitcnt = 0
+CPU01;CPU 1 fsdevelop2;User%;Sys%;Wait%;Idle%
+CPU01;T0001;17,1;35,4;17,1;30,4
+CPU01;T0002;13,0;29,4;10,0;47,6
+CPU01;T0003;19,8;36,9;20,4;23,0
+CPU01;T0004;10,0;23,6;6,1;60,4
+CPU01;T0005;8,7;18,1;5,1;68,1
+CPU01;T0006;7,4;16,8;3,5;72,4
+CPU02;CPU 2 fsdevelop2;User%;Sys%;Wait%;Idle%
+CPU02;T0001;14,9;25,6;22,4;37,1
+CPU02;T0002;13,5;28,4;9,0;49,0
+CPU02;T0003;18,4;40,6;20,3;20,7
+CPU02;T0004;13,0;28,1;4,2;54,8
+CPU02;T0005;8,1;17,6;2,0;72,4
+CPU02;T0006;10,4;25,5;3,2;60,8
+CPU03;CPU 3 fsdevelop2;User%;Sys%;Wait%;Idle%
+CPU03;T0001;18,8;35,9;17,7;27,6
+CPU03;T0002;14,2;28,3;7,8;49,7
+CPU03;T0003;20,2;43,3;14,8;21,7
+CPU03;T0004;11,3;26,4;4,5;57,8
+CPU03;T0005;8,2;21,9;2,8;67,1
+CPU03;T0006;8,4;21,4;2,0;68,2
+CPU04;CPU 4 fsdevelop2;User%;Sys%;Wait%;Idle%
+CPU04;T0001;14,0;28,2;22,7;35,1
+CPU04;T0002;15,3;36,2;8,0;40,5
+CPU04;T0003;23,4;42,5;16,1;18,0
+CPU04;T0004;13,4;31,7;4,4;50,5
+CPU04;T0005;12,9;29,4;2,0;55,7
+CPU04;T0006;9,3;26,8;3,2;60,7
+CPU_ALL;CPU Total fsdevelop2;User%;Sys%;Wait%;Idle%;Busy;CPUs
+CPU_ALL;T0001;16,2;31,3;20,0;32,5;;4
+CPU_ALL;T0002;14,0;30,6;8,7;46,7;;4
+CPU_ALL;T0003;20,4;40,8;17,9;20,8;;4
+CPU_ALL;T0004;11,9;27,4;4,8;55,9;;4
+CPU_ALL;T0005;9,5;21,7;2,9;65,8;;4
+CPU_ALL;T0006;8,9;22,6;3,0;65,5;;4
+DISKBSIZE;Disk Block Size fsdevelop2;hdisk0;hdisk3;hdisk7;hdisk4;hdisk2;hdisk10;hdisk6;hdisk5;hdisk9;cd0;hdisk11;hdisk8
+DISKBSIZE;T0001;18,7;65,8;17,6;22,3;15,3;0,0;0,0;0,0;0,0;0,0;4,0;0,0
+DISKBSIZE;T0002;4,0;0,0;4,0;4,4;4,0;0,0;0,0;0,0;0,0;0,0;4,0;0,0
+DISKBSIZE;T0003;5,7;0,0;3,4;5,7;4,3;0,0;0,0;0,0;0,0;0,0;6,0;0,0
+DISKBSIZE;T0004;5,6;0,0;2,6;2,9;4,1;0,0;0,0;0,0;0,0;0,0;4,7;0,0
+DISKBSIZE;T0005;3,6;0,0;3,1;3,1;4,5;0,0;0,0;0,0;0,0;0,0;3,5;0,0
+DISKBSIZE;T0006;4,5;0,0;2,3;4,4;4,6;0,0;0,0;0,0;0,0;0,0;4,5;0,0
+DISKBUSY;Disk %Busy fsdevelop2;hdisk0;hdisk3;hdisk7;hdisk4;hdisk2;hdisk10;hdisk6;hdisk5;hdisk9;cd0;hdisk11;hdisk8
+DISKBUSY;T0001;48,7;2,7;20,8;15,0;31,1;0,0;0,0;0,0;0,0;0,0;24,0;0,0
+DISKBUSY;T0002;11,8;0,0;4,8;14,4;20,2;0,0;0,0;0,0;0,0;0,0;8,5;0,0
+DISKBUSY;T0003;64,8;0,0;5,3;60,1;16,7;0,0;0,0;0,0;0,0;0,0;57,3;0,0
+DISKBUSY;T0004;14,2;0,0;2,2;7,3;1,8;0,0;0,0;0,0;0,0;0,0;13,0;0,0
+DISKBUSY;T0005;2,8;0,0;0,3;10,1;2,3;0,0;0,0;0,0;0,0;0,0;2,6;0,0
+DISKBUSY;T0006;6,5;0,0;0,5;7,2;3,6;0,0;0,0;0,0;0,0;0,0;5,6;0,0
+DISKREAD;Disk Read kb/s fsdevelop2;hdisk0;hdisk3;hdisk7;hdisk4;hdisk2;hdisk10;hdisk6;hdisk5;hdisk9;cd0;hdisk11;hdisk8
+DISKREAD;T0001;1270,6;439,6;801,0;439,6;811,8;0,0;0,0;0,0;0,0;0,0;110,8;0,0
+DISKREAD;T0002;52,1;0,0;41,9;1,1;42,0;0,0;0,0;0,0;0,0;0,0;36,5;0,0
+DISKREAD;T0003;7,9;0,0;5,6;2,7;5,6;0,0;0,0;0,0;0,0;0,0;6,1;0,0
+DISKREAD;T0004;4,5;0,0;2,5;2,4;2,3;0,0;0,0;0,0;0,0;0,0;0,3;0,0
+DISKREAD;T0005;0,8;0,0;0,5;0,3;0,5;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+DISKREAD;T0006;0,4;0,0;0,3;0,0;0,5;0,0;0,0;0,0;0,0;0,0;0,0;0,0
+DISKWRITE;Disk Write kb/s fsdevelop2;hdisk0;hdisk3;hdisk7;hdisk4;hdisk2;hdisk10;hdisk6;hdisk5;hdisk9;cd0;hdisk11;hdisk8
+DISKWRITE;T0001;65,8;0,0;0,0;92,7;28,4;0,0;0,0;0,0;0,0;0,0;65,8;0,0
+DISKWRITE;T0002;29,1;0,0;0,0;80,8;70,2;0,0;0,0;0,0;0,0;0,0;29,1;0,0
+DISKWRITE;T0003;531,4;0,0;11,1;354,4;81,7;0,0;0,0;0,0;0,0;0,0;559,6;0,0
+DISKWRITE;T0004;162,8;0,0;2,8;26,2;6,8;0,0;0,0;0,0;0,0;0,0;134,5;0,0
+DISKWRITE;T0005;12,1;0,0;0,2;33,3;11,1;0,0;0,0;0,0;0,0;0,0;12,1;0,0
+DISKWRITE;T0006;49,2;0,0;0,8;36,1;20,3;0,0;0,0;0,0;0,0;0,0;49,2;0,0
+DISKXFER;Disk transfers per second fsdevelop2;hdisk0;hdisk3;hdisk7;hdisk4;hdisk2;hdisk10;hdisk6;hdisk5;hdisk9;cd0;hdisk11;hdisk8
+DISKXFER;T0001;71,5;6,7;45,4;23,9;54,9;0,0;0,0;0,0;0,0;0,0;44,6;0,0
+DISKXFER;T0002;20,1;0,0;10,5;18,5;28,0;0,0;0,0;0,0;0,0;0,0;16,3;0,0
+DISKXFER;T0003;94,7;0,0;4,9;63,1;20,4;0,0;0,0;0,0;0,0;0,0;94,5;0,0
+DISKXFER;T0004;29,8;0,0;2,0;10,0;2,2;0,0;0,0;0,0;0,0;0,0;28,5;0,0
+DISKXFER;T0005;3,6;0,0;0,2;10,7;2,6;0,0;0,0;0,0;0,0;0,0;3,4;0,0
+DISKXFER;T0006;10,9;0,0;0,5;8,3;4,5;0,0;0,0;0,0;0,0;0,0;10,8;0,0
+FILE;File I/O fsdevelop2;iget;namei;dirblk;readch;writech;ttyrawch;ttycanch;ttyoutch
+FILE;T0001;11;4960;483;11080165;210786;1;0;84
+FILE;T0002;13;2072;471;6441722;184130;0;0;62
+FILE;T0003;15;3726;4530;6829334;739717;0;0;0
+FILE;T0004;6;1804;3607;1511358;58310;0;0;40
+FILE;T0005;0;895;17;762822;29017;2;0;608
+FILE;T0006;1;743;94;536271;25220;0;0;88
+IOADAPT;Disk Adapter fsdevelop2;scsi0_read-KB/s;scsi0_write-KB/s;scsi0_xfer-tps;ssa0_read-KB/s;ssa0_write-KB/s;ssa0_xfer-tps;scsi1_read-KB/s;scsi1_write-KB/s;scsi1_xfer-tps
+IOADAPT;T0001;1270,6;65,8;71,5;2492,0;121,1;130,9;110,8;65,8;44,6
+IOADAPT;T0002;52,1;29,1;20,1;84,9;151,0;57,0;36,5;29,1;16,3
+IOADAPT;T0003;7,9;531,4;94,7;13,9;447,1;88,3;6,1;559,6;94,5
+IOADAPT;T0004;4,5;162,8;29,8;7,2;35,8;14,2;0,3;134,5;28,5
+IOADAPT;T0005;0,8;12,1;3,6;1,3;44,6;13,5;0,0;12,1;3,4
+IOADAPT;T0006;0,4;49,2;10,9;0,8;57,2;13,3;0,0;49,2;10,8
+JFSFILE;JFS Filespace %Used fsdevelop2;/;/home;/usr;/var;/tmp;/fsdevelop2/product/sybase;/fsdevelop2/sybase/sybadm;/fsdevelop2/product/mercator;/fsdevelop2/product/websphere;/fsdevelop2/product/mqm;/fsdevelop2/product/tina;/fsdevelop2/product/tuxedo;/fsdevelop2/product/crips;/fsdevelop2/product/oracle;/fsdevelop2/product/essbase;/fsdevelop2/dev;/fsdevelop2/oracle/oraadm;/fsdevelop2/sybase/dumps;/fsdevelop2/oracle/dumps;/fsdevelop2/oracle/data;/fsdevelop2/product/fonction;/fsdevelop2/product/insure;/fsdevelop2/essbase;/fsdevelop2/product/was4;/fsdevelop2/product/netscape;/fsdevelop2/product/datastage;/fsdevelop2/product/oas4;/fsdevelop2/product/express63;/fsdevelop2/express/tmp;/fsdevelop2/express/exadm;/fsdevelop2/express/data;/fsdevelop2/product/mercator651;/fsdevelop2/essbase/dumps;/fsdevelop2/product/essbase6,5,1;/fsdevelop2/product/merca67;/fsdevelop2/sybase/distrib;/fsdevelop2/product/essbase6,5,4,2;/dev6542
+JFSFILE;T0001;52,1;78,9;74,3;68,0;79,5;75,6;28,3;80,8;74,1;57,3;51,9;69,5;44,1;65,0;17,8;93,7;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSFILE;T0002;52,1;78,9;74,3;68,1;79,5;75,6;28,3;80,8;74,1;57,3;51,9;69,5;44,1;65,0;17,8;93,7;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSFILE;T0003;52,1;78,9;74,3;68,1;80,2;75,6;28,3;80,8;74,1;57,3;51,9;69,5;44,1;65,0;17,8;93,8;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSFILE;T0004;52,1;78,9;74,3;68,1;79,5;75,6;28,3;80,8;74,1;57,2;51,9;69,5;44,1;65,0;17,8;93,8;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSFILE;T0005;52,1;78,9;74,3;68,1;79,5;75,6;28,3;80,8;74,1;57,2;51,9;69,5;44,1;65,0;17,8;93,8;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSFILE;T0006;52,1;78,9;74,3;68,1;79,5;75,6;28,3;80,8;74,1;57,2;51,9;69,5;44,1;65,0;17,8;93,8;4,1;48,7;7,9;28,5;45,9;29,2;13,7;81,4;71,9;69,8;83,8;32,9;11,8;5,2;76,1;51,1;15,1;7,4;44,3;86,5;37,3;10,6
+JFSINODE;JFS Inode %Used fsdevelop2;/;/home;/usr;/var;/tmp;/fsdevelop2/product/sybase;/fsdevelop2/sybase/sybadm;/fsdevelop2/product/mercator;/fsdevelop2/product/websphere;/fsdevelop2/product/mqm;/fsdevelop2/product/tina;/fsdevelop2/product/tuxedo;/fsdevelop2/product/crips;/fsdevelop2/product/oracle;/fsdevelop2/product/essbase;/fsdevelop2/dev;/fsdevelop2/oracle/oraadm;/fsdevelop2/sybase/dumps;/fsdevelop2/oracle/dumps;/fsdevelop2/oracle/data;/fsdevelop2/product/fonction;/fsdevelop2/product/insure;/fsdevelop2/essbase;/fsdevelop2/product/was4;/fsdevelop2/product/netscape;/fsdevelop2/product/datastage;/fsdevelop2/product/oas4;/fsdevelop2/product/express63;/fsdevelop2/express/tmp;/fsdevelop2/express/exadm;/fsdevelop2/express/data;/fsdevelop2/product/mercator651;/fsdevelop2/essbase/dumps;/fsdevelop2/product/essbase6,5,1;/fsdevelop2/product/merca67;/fsdevelop2/sybase/distrib;/fsdevelop2/product/essbase6,5,4,2;/dev6542
+JFSINODE;T0001;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+JFSINODE;T0002;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+JFSINODE;T0003;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+JFSINODE;T0004;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+JFSINODE;T0005;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+JFSINODE;T0006;0,5;3,1;3,9;3,2;12,2;1,8;5,1;3,5;2,8;4,4;1,1;6,0;1,5;3,5;1,7;5,3;0,2;0,1;0,0;0,0;3,6;1,5;5,3;6,1;0,7;3,3;3,1;2,2;0,1;0,3;0,0;1,7;0,1;0,4;2,3;0,0;1,4;0,0
+MEM;Memory fsdevelop2;Real Free ;Virtual free ;Real free(MB);Virtual free(MB);Real total(MB);Virtual total(MB)
+MEM;T0001;0,4;49,1;23,3;3019,1;6144,0;6144,0
+MEM;T0002;0,2;49,1;14,6;3019,1;6144,0;6144,0
+MEM;T0003;0,1;49,1;4,6;3018,9;6144,0;6144,0
+MEM;T0004;0,3;49,1;18,0;3018,9;6144,0;6144,0
+MEM;T0005;0,3;49,1;21,4;3018,9;6144,0;6144,0
+MEM;T0006;0,3;49,1;21,0;3018,9;6144,0;6144,0
+MEMUSE;Memory Use fsdevelop2;%numperm;%minperm;%maxperm;minfree;maxfree
+MEMUSE;T0001;62,8;20,0;79,9;120;128
+MEMUSE;T0002;62,8;20,0;79,9;120;128
+MEMUSE;T0003;62,7;20,0;79,9;120;128
+MEMUSE;T0004;62,6;20,0;79,9;120;128
+MEMUSE;T0005;62,6;20,0;79,9;120;128
+MEMUSE;T0006;62,6;20,0;79,9;120;128
+NET;Network I/O fsdevelop2;en0-read-KB/s;lo0-read-KB/s;en0-write-KB/s;lo0-write-KB/s;
+NET;T0001;39,6;4,6;46,5;4,6;
+NET;T0002;33,1;4,0;37,0;4,0;
+NET;T0003;170,6;22,6;18,7;22,6;
+NET;T0004;34,8;3,2;4,0;3,2;
+NET;T0005;2,1;1,4;4,6;1,4;
+NET;T0006;2,0;1,6;2,4;1,6;
+NETPACKET;Network Packets fsdevelop2;en0-reads/s;lo0-reads/s;en0-writes/s;lo0-writes/s;
+NETPACKET;T0001;71,5;10,4;70,9;10,4;
+NETPACKET;T0002;59,2;10,6;57,5;10,6;
+NETPACKET;T0003;162,6;76,4;79,2;76,5;
+NETPACKET;T0004;75,1;21,9;28,0;21,9;
+NETPACKET;T0005;16,7;8,0;13,8;8,0;
+NETPACKET;T0006;13,5;3,8;10,6;3,8;
+PAGE;Paging fsdevelop2;faults;pgin;pgout;pgsin;pgsout;reclaims;scans;cycles
+PAGE;T0001;7578,4;143,7;46,9;142,3;0,0;0,0;0,0;0,0
+PAGE;T0002;6216,6;43,5;44,8;42,0;0,0;0,0;0,0;0,0
+PAGE;T0003;8927,2;6,6;234,2;5,4;7,7;0,0;169,1;0,0
+PAGE;T0004;4071,3;2,5;45,6;2,4;0,0;0,0;0,0;0,0
+PAGE;T0005;197,7;0,5;11,6;0,4;0,0;0,0;0,0;0,0
+PAGE;T0006;821,9;0,3;25,9;0,3;0,0;0,0;0,0;0,0
+PROC;Processes fsdevelop2;Runnable;Swap-in;pswitch;syscall;read;write;fork;exec;rcvint;xmtint;sem;msg
+PROC;T0001;2,10;2,80;3161;530711;502023;282;55;55;0;0;37;3
+PROC;T0002;1,63;1,83;2798;530334;504085;285;45;40;0;0;42;4
+PROC;T0003;3,53;2,77;3357;531202;486260;562;59;56;0;0;242;7
+PROC;T0004;1,90;1,20;2698;522225;503885;144;35;29;0;0;85;4
+PROC;T0005;1,30;1,20;2387;513208;504772;66;1;1;0;0;46;8
+PROC;T0006;1,17;1,10;2387;511309;504744;51;8;8;0;0;42;4
+TOP;%CPU Utilisation
+TOP;+PID;Time;%CPU;%Usr;%Sys;Threads;Size;ResText;ResData;CharIO;%RAM;Paging;Command;WLMclass
+TOP;0000000;T0005;0,2;0,0;0,2;1;268;7684;12;0;0;5;Swapper;
+TOP;0000001;T0002;1,0;0,4;0,6;1;1000;32;236;0;0;0;init;
+TOP;0000001;T0003;1,4;0,3;1,2;1;1000;32;236;0;0;0;init;
+TOP;0000001;T0004;1,0;0,3;0,8;1;1000;32;236;0;0;11;init;
+TOP;0001548;T0003;0,3;0,0;0,3;1;268;7684;8;0;0;0;lrud;
+TOP;0002064;T0002;0,5;0,0;0,5;5;320;7684;168;0;0;0;gil = TCP/IP;
+TOP;0002064;T0003;0,9;0,0;0,9;5;320;7684;168;0;0;0;gil = TCP/IP;
+TOP;0002064;T0004;0,7;0,0;0,7;5;320;7684;168;0;0;0;gil = TCP/IP;
+TOP;0002064;T0005;0,8;0,0;0,8;5;320;7684;168;0;0;0;gil = TCP/IP;
+TOP;0002064;T0006;0,6;0,0;0,6;5;320;7684;168;0;0;0;gil = TCP/IP;
+TOP;0005258;T0003;2,9;0,0;2,9;1;300;4;120;0;0;0;syncd;
+TOP;0005258;T0005;0,5;0,0;0,5;1;300;4;120;0;0;0;syncd;
+TOP;0005258;T0006;2,2;0,0;2,2;1;300;4;120;0;0;0;syncd;
+TOP;0010838;T0004;0,2;0,0;0,1;1;584;24;216;0;0;7;inetd;
+TOP;0012656;T0003;0,1;0,0;0,1;9;376;0;292;0;0;0;nfsd;
+TOP;0020434;T0002;0,8;0,8;0,0;57;36212;0;13488;0;0;0;java;
+TOP;0020434;T0003;0,8;0,8;0,0;57;36212;0;13488;0;0;0;java;
+TOP;0020434;T0005;0,8;0,8;0,0;57;36212;0;13488;0;0;0;java;
+TOP;0034320;T0002;0,1;0,0;0,1;1;12356;4100;916;0;0;0;dataserver;
+TOP;0034320;T0003;0,7;0,3;0,5;1;12356;4100;916;0;0;0;dataserver;
+TOP;0034320;T0004;0,5;0,2;0,3;1;12356;4100;916;6;0;0;dataserver;
+TOP;0034320;T0005;0,2;0,1;0,1;1;12356;4100;916;0;0;0;dataserver;
+TOP;0039260;T0002;0,2;0,2;0,0;37;39780;20;5540;88;0;0;wrksf;
+TOP;0039260;T0003;0,1;0,1;0,0;37;39780;20;5540;72;0;0;wrksf;
+TOP;0039260;T0006;0,2;0,1;0,0;37;39780;20;5540;88;0;0;wrksf;
+TOP;0041026;T0002;3,0;0,0;2,9;1;12484;4100;964;0;0;0;dataserver;
+TOP;0041026;T0003;3,9;0,6;3,3;1;12484;4100;964;6;0;0;dataserver;
+TOP;0041026;T0004;3,0;0,2;2,9;1;12484;4100;964;0;0;0;dataserver;
+TOP;0041026;T0005;3,2;0,0;3,2;1;12484;4100;964;0;0;0;dataserver;
+TOP;0041026;T0006;3,0;0,0;2,9;1;12484;4100;964;0;0;0;dataserver;
+TOP;0042056;T0002;1,2;0,2;1,1;1;12360;4100;1004;0;0;0;dataserver;
+TOP;0042056;T0003;4,5;0,6;3,9;1;12360;4100;1004;0;0;1;dataserver;
+TOP;0042056;T0004;0,5;0,0;0,5;1;12360;4100;1004;12;0;0;dataserver;
+TOP;0042056;T0005;3,0;0,3;2,7;1;12360;4100;1004;0;0;0;dataserver;
+TOP;0042056;T0006;2,0;0,2;1,8;1;12360;4100;1004;0;0;0;dataserver;
+TOP;0047998;T0002;0,2;0,1;0,0;34;239472;4;15744;158;0;0;expres63;
+TOP;0047998;T0003;0,1;0,1;0,0;29;239472;4;15724;158;0;0;expres63;
+TOP;0047998;T0004;0,1;0,0;0,1;24;239476;4;15728;158;0;0;expres63;
+TOP;0047998;T0005;0,2;0,0;0,1;30;239476;4;15728;158;0;0;expres63;
+TOP;0047998;T0006;0,1;0,1;0,0;25;239480;4;15732;158;0;0;expres63;
+TOP;0050312;T0002;1,3;0,2;1,1;1;9144;3160;804;0;0;0;dataserver;
+TOP;0050312;T0003;4,2;0,6;3,6;1;9144;3160;804;17;0;0;dataserver;
+TOP;0050312;T0004;1,9;0,1;1,8;1;9144;3160;804;0;0;0;dataserver;
+TOP;0050312;T0005;2,0;0,1;1,9;1;9144;3160;804;0;0;0;dataserver;
+TOP;0050312;T0006;1,4;0,0;1,4;1;9144;3160;804;0;0;0;dataserver;
+TOP;0051864;T0002;0,5;0,2;0,3;1;12356;4100;964;0;0;0;dataserver;
+TOP;0051864;T0003;1,2;0,4;0,8;1;12356;4100;964;0;0;0;dataserver;
+TOP;0051864;T0004;0,4;0,0;0,4;1;12356;4100;964;12;0;0;dataserver;
+TOP;0051864;T0005;0,7;0,1;0,6;1;12356;4100;964;0;0;0;dataserver;
+TOP;0055476;T0003;0,9;0,6;0,3;1;12360;4100;932;0;0;0;dataserver;
+TOP;0055476;T0004;0,3;0,1;0,1;1;12360;4100;932;12;0;0;dataserver;
+TOP;0055476;T0005;0,1;0,1;0,0;1;12360;4100;932;0;0;0;dataserver;
+TOP;0057798;T0002;0,9;0,1;0,9;1;12380;4100;1032;0;0;0;dataserver;
+TOP;0057798;T0003;4,2;0,6;3,6;1;12380;4100;1032;12;0;0;dataserver;
+TOP;0057798;T0004;0,6;0,1;0,5;1;12380;4100;1032;0;0;0;dataserver;
+TOP;0057798;T0005;1,9;0,1;1,8;1;12380;4100;1032;0;0;0;dataserver;
+TOP;0057798;T0006;0,9;0,1;0,8;1;12380;4100;1032;0;0;0;dataserver;
+TOP;0058312;T0003;0,8;0,3;0,5;1;12356;4100;784;6;0;0;dataserver;
+TOP;0058828;T0002;0,7;0,3;0,4;5;15136;2092;1024;0;0;0;dataserver;
+TOP;0058828;T0003;1,3;0,5;0,7;5;15136;2092;1024;0;0;0;dataserver;
+TOP;0058828;T0004;1,1;0,4;0,7;5;15136;2092;1024;12;0;0;dataserver;
+TOP;0058828;T0005;1,0;0,2;0,7;5;15136;2092;1024;0;0;0;dataserver;
+TOP;0058828;T0006;1,2;0,3;0,9;5;15136;2092;1024;0;0;0;dataserver;
+TOP;0059604;T0002;1,0;0,1;0,9;1;12360;4100;1132;0;0;0;dataserver;
+TOP;0059604;T0003;1,8;0,4;1,5;1;12360;4100;1132;12;0;0;dataserver;
+TOP;0059604;T0004;2,1;0,2;1,9;1;12360;4100;1132;0;0;0;dataserver;
+TOP;0059604;T0005;0,3;0,0;0,3;1;12360;4100;1132;0;0;0;dataserver;
+TOP;0059604;T0006;0,4;0,2;0,2;1;12360;4100;1132;0;0;0;dataserver;
+TOP;0080816;T0003;0,2;0,1;0,0;73;80024;0;40300;0;1;0;java;
+TOP;0080816;T0004;0,2;0,2;0,0;73;80024;0;40300;0;1;0;java;
+TOP;0080816;T0005;0,2;0,2;0,0;73;80024;0;40300;0;1;0;java;
+TOP;0086280;T0002;0,1;0,1;0,0;53;30972;0;11776;0;0;0;java;
+TOP;0086280;T0004;0,1;0,1;0,0;53;30972;0;11768;0;0;0;java;
+TOP;0086588;T0002;1,3;1,3;0,0;57;37600;0;15396;1180;0;0;java;
+TOP;0086588;T0003;0,8;0,8;0,0;57;37600;0;15396;0;0;0;java;
+TOP;0086588;T0005;0,8;0,8;0,0;57;37600;0;15396;0;0;0;java;
+TOP;0086588;T0006;0,2;0,2;0,0;57;37600;0;15396;0;0;0;java;
+TOP;0089836;T0002;0,4;0,4;0,0;65;48176;0;21412;0;0;0;java;
+TOP;0089836;T0003;0,2;0,2;0,0;65;48176;0;21400;0;0;0;java;
+TOP;0089836;T0004;0,5;0,5;0,0;65;48176;0;21400;0;0;0;java;
+TOP;0089836;T0005;0,2;0,2;0,0;65;48176;0;21400;0;0;0;java;
+TOP;0090104;T0002;0,8;0,1;0,6;1;1660;152;640;62945;0;0;uvapi_server;
+TOP;0090104;T0003;0,3;0,1;0,2;1;1660;152;640;19844;0;0;uvapi_server;
+TOP;0092726;T0002;0,2;0,0;0,1;1;9144;3160;960;0;0;0;dataserver;
+TOP;0092726;T0003;1,4;0,6;0,8;1;9144;3160;960;8;0;0;dataserver;
+TOP;0092726;T0004;0,4;0,2;0,2;1;9144;3160;960;0;0;0;dataserver;
+TOP;0096618;T0003;0,5;0,4;0,1;6;15552;2472;1000;0;0;0;dataserver;
+TOP;0096618;T0004;0,6;0,3;0,2;6;15552;2472;1000;6;0;0;dataserver;
+TOP;0096618;T0005;0,3;0,1;0,2;6;15552;2472;1000;0;0;0;dataserver;
+TOP;0096618;T0006;0,4;0,2;0,2;6;15552;2472;1000;0;0;0;dataserver;
+TOP;0098436;T0002;0,2;0,1;0,1;44;101088;32;101132;0;2;0;java;
+TOP;0098436;T0006;0,2;0,1;0,1;44;101088;32;101124;0;2;0;java;
+TOP;0103506;T0002;2,0;1,2;0,9;1;9148;3160;888;0;0;0;dataserver;
+TOP;0103506;T0003;2,2;1,2;1,1;1;9148;3160;888;8;0;0;dataserver;
+TOP;0103506;T0004;1,2;0,6;0,5;1;9148;3160;888;0;0;0;dataserver;
+TOP;0103506;T0005;0,8;0,5;0,3;1;9148;3160;888;0;0;0;dataserver;
+TOP;0103506;T0006;1,1;0,7;0,4;1;9148;3160;888;0;0;0;dataserver;
+TOP;0129542;T0003;0,1;0,1;0,1;9;66684;2792;63440;0;1;0;ESSSVR;
+TOP;0161102;T0004;0,1;0,1;0,0;1;5616;2700;1668;34610;0;2;uvapi_slave;
+TOP;0161102;T0005;0,4;0,3;0,1;1;5616;2700;1668;207469;0;0;uvapi_slave;
+TOP;0161894;T0005;0,1;0,1;0,1;1;3796;1508;1584;627;0;0;sfLecClient;
+TOP;0166610;T0006;0,2;0,1;0,0;77;130476;32;92496;0;1;0;java;
+TOP;0171520;T0002;0,4;0,3;0,0;1;596;236;440;11061;0;10;ksh;
+TOP;0174114;T0003;0,1;0,1;0,1;8;3184;696;2584;0;0;0;ESSBASE;
+TOP;0212516;T0002;0,6;0,4;0,2;1;9684;2700;5732;90934;0;9;uvapi_slave;
+TOP;0212516;T0003;0,2;0,1;0,1;1;9684;2700;5732;88015;0;0;uvapi_slave;
+TOP;0212516;T0004;0,3;0,2;0,1;1;9684;2700;5732;88006;0;0;uvapi_slave;
+TOP;0212516;T0005;0,2;0,2;0,0;1;9684;2700;5732;88033;0;0;uvapi_slave;
+TOP;0212516;T0006;0,2;0,1;0,1;1;9684;2700;5732;88032;0;0;uvapi_slave;
+TOP;0214698;T0002;0,2;0,0;0,2;1;13000;3932;1248;0;0;0;dataserver;
+TOP;0214698;T0003;2,1;0,4;1,7;1;13000;3932;1244;0;0;0;dataserver;
+TOP;0214698;T0004;0,9;0,3;0,6;1;13000;3932;1244;6;0;0;dataserver;
+TOP;0214698;T0005;0,2;0,0;0,2;1;13000;3932;1244;0;0;0;dataserver;
+TOP;0217998;T0002;99,1;30,2;68,8;1;2728;888;480;0;0;0;nbasic;
+TOP;0217998;T0003;97,2;30,2;66,9;1;2728;888;480;0;0;0;nbasic;
+TOP;0217998;T0004;101,2;30,5;70,7;1;2728;888;480;0;0;0;nbasic;
+TOP;0217998;T0005;100,4;30,8;69,7;1;2728;888;480;0;0;0;nbasic;
+TOP;0217998;T0006;101,5;29,3;72,2;1;2728;888;480;0;0;0;nbasic;
+TOP;0235648;T0002;14,3;7,6;6,7;1;9884;2700;5936;0;0;886;uvapi_slave;
+TOP;0235648;T0003;13,9;9,8;4,2;1;9924;2700;5976;0;0;353;uvapi_slave;
+TOP;0235648;T0004;0,2;0,0;0,2;1;9924;2700;5976;0;0;11;uvapi_slave;
+TOP;0239362;T0002;0,3;0,2;0,1;1;8772;2700;4820;115335;0;0;uvapi_slave;
+TOP;0239362;T0003;0,2;0,1;0,1;1;8772;2700;4820;115650;0;0;uvapi_slave;
+TOP;0239362;T0004;0,3;0,1;0,2;1;8772;2700;4820;115638;0;0;uvapi_slave;
+TOP;0239362;T0005;0,3;0,2;0,1;1;8772;2700;4820;115673;0;0;uvapi_slave;
+TOP;0239362;T0006;0,2;0,1;0,0;1;8772;2700;4820;115672;0;0;uvapi_slave;
+TOP;0241838;T0002;0,3;0,1;0,2;1;8956;2700;5004;115405;0;0;uvapi_slave;
+TOP;0241838;T0003;0,2;0,1;0,1;1;8956;2700;5004;115720;0;0;uvapi_slave;
+TOP;0241838;T0004;0,5;0,4;0,0;1;8956;2700;5004;115708;0;0;uvapi_slave;
+TOP;0241838;T0005;0,3;0,2;0,1;1;8956;2700;5004;115743;0;0;uvapi_slave;
+TOP;0241838;T0006;0,1;0,1;0,1;1;8956;2700;5004;115742;0;0;uvapi_slave;
+TOP;0246206;T0002;0,8;0,6;0,3;41;134036;32;98132;3;2;42;java;
+TOP;0274218;T0003;1,2;0,4;0,8;1;884;136;880;302412;0;36;ftpd;
+ZZZZ;T0001;10:59:21
+ZZZZ;T0002;10:59:51
+ZZZZ;T0003;11:00:21
+ZZZZ;T0004;11:00:51
+ZZZZ;T0005;11:01:21
+ZZZZ;T0006;11:01:51

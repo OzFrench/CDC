@@ -1,0 +1,48 @@
+#!/bin/sh
+
+####################################################
+# Script de stop / start de CICS Transaction Gateway
+# A LANCER en ROOT
+# Auteur: Arnaud BOUR
+# Date: 12/12/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+
+START="Demarrage de CTG"
+STOP="Arret de CTG"
+
+CTGPROC=`ps -ef | grep JGate | grep -v grep | awk '{print $2}'`
+
+START_BIN="nohup /fsdevelop2/product/ctg/bin/ctgstart -noinput &"
+STOP_BIN1="kill -9 $CTGPROC"
+STOP_BIN2="cicscli -x"
+
+case "$1" in
+    'start')
+        if [ -f "$START_BIN" ]
+		then
+            echo $START
+       	    $START_BIN & >/dev/console
+	fi
+        ;;
+    'stop')
+        if [ -f "$STOP_BIN" ]
+		then
+            echo $STOP
+            $STOP_BIN1 & >/dev/console
+            $STOP_BIN2 & >/dev/console
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

@@ -1,0 +1,37 @@
+#  --------------------------------------------------------------------
+#  Le fichier removeEA.tcl contient les procedures suivantes
+#  removeEA          : Demarrage d'un EntrepriseApp
+#  --------------------------------------------------------------------
+
+#
+# Affectation des Variables Globales
+#
+#
+# Demarrage de l'Entreprise Application
+#
+
+proc removeEA {} {
+
+	global eaName errorCode fullEaName 
+	set fullEaName "/EnterpriseApp:$eaName/"
+
+	# Si Application server n'existe pas alors creation sinon message d'erreur
+    	set errorCode 0
+	catch {set try [EnterpriseApp show "$fullEaName" -attribute none]}
+    	if {$errorCode != 2} {
+		set errorCode 0
+		puts "\nApplication d'entreprise $eaName en cours d'arret"
+		EnterpriseApp stop "$fullEaName"
+		puts "\nApplication d'entreprise $eaName arrete"
+		puts "\nApplication d'entreprise $eaName en cours de suppression"
+		set erroCode 0
+		EnterpriseApp remove "$fullEaName"
+		if {$errorCode == 0} {
+			puts "\nSuppression de l' Application d'entreprise $eaName reussie"
+		} else {
+			puts "\nProbleme lors de la suppression de l'Application d'entreprise $eaName"
+		}
+  	 } else {
+      	      puts "\nL'EnterpriseApp $eaName n'existe pas.\n"
+         }
+}

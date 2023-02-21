@@ -1,0 +1,199 @@
+--- Attributs et sous-attributs d'un Application Server ---
+
+  Name testApplicationServer
+
+  FullName /Node:fsdevelop2/ApplicationServer:testApplicationServer/
+
+  CurrentState Stopped
+
+  DesiredState Stopped
+
+  StartTime 0
+
+  Executable java
+
+  CommandLineArgs {}
+
+  Environment {}
+
+  UserId {}
+
+  GroupId {}
+
+  WorkingDirectory {}
+
+  Umask 18
+
+  Stdin {}
+
+  Stdout /fsdevelop2/product/was4/livraison/test_stdout
+
+  Stderr /fsdevelop2/product/was4/livraison/test_stderr
+
+  MaxStartupAttempts 2
+
+  ProcessPriority 20
+
+  PingInterval 60
+
+  PingTimeout 200
+
+  PingInitialTimeout 600
+
+  ProcessId 0
+
+  SelectionPolicy roundrobinpreferlocal
+
+
+  JVMConfig {{AdditionalCommandLineArgs {}} 
+	     {BootClasspathAppend {}} 
+	     {BootClasspathPrepend {}} 
+	     {BootClasspathReplace {}} 
+	     {Classpaths {}} 
+	     {DebugMode false} 
+	     {DebugString {}} 
+	     {DisableJIT false} 
+	     {HProfArgs {}} 
+	     {InitialHeapSize 32} 
+	     {MaxHeapSize 128} 
+	     {RunHProf false} 
+	     {SystemProperties {}} 
+	     {VerboseClassLoading false} 
+	     {VerboseGC false} 
+	     {VerboseJNI false} 
+	     {GeneratedCommandLineArgs -Xms32m -Xmx128m }
+	    }
+
+
+  ORBConfig {{OrbPropertiesTable {}} 
+	     {RMIRemoteCodebase {}} 
+	     {BootstrapHostname {}} 
+	     {BootstrapPort 900} 
+	     {ConnectionCacheMaximum 240} 
+	     {ConnectionCacheMinimum 100} 
+	     {ExternalConfigURL {}} 
+	     {ForceTunnel whenrequired} 
+	     {ListenerPort 0} 
+	     {ThreadPoolSize 20} 
+	     {LocateRequestTimeout 180} 
+	     {LSDHostname {}} 
+	     {LocalHostname {}} 
+	     {RequestRetriesCount 1} 
+	     {RequestRetriesDelay 0} 
+	     {RequestTimeout 180} 
+	     {TunnelAgentURL {}} 
+	     {CommTraceEnabled false} 
+	     {NoLocalCopies false} 
+	     {SSLConfig {}} 
+	     {SSLListenerPort 0}}}
+
+
+  CustomServiceConfig {{{Name {Automatic Generation of Plugin Configuration}}
+		        {Description {If enabled, the plugin configuration files will be regenerated when the application server is started}}
+		        {Classname com.ibm.websphere.plugincfg.initializers.AEPluginCfgService} 
+			{Classpath null}
+		        {Enabled false} 
+			{ExternalConfigURL {}} 
+			{DynamicProperties {}}
+			}
+		       }
+
+  TraceSpec {}
+
+  TraceOutput {}
+
+  LogFileSpec {}
+
+  AdminAgentIOR {}
+
+  WLMTemplateIOR {}
+
+  SystemProperties {}
+
+  DebugEnabled False
+
+  SourcePath {}
+
+  OLTEnabled False
+
+  OLTServerHost localhost
+
+  OLTServerPort 2102
+
+  NodeStartState Current
+
+  IsAClone False
+
+  TranTimeout 120
+
+  TranInactivityTimeout 60000
+
+  ThreadPoolSize 20
+
+  SecurityEnabled False
+
+  PmiSpec {}
+
+  CacheConfig {{cacheSweepInterval 1000} {passivationDirectory {}} {cacheSize 2047}}
+
+  WebContainerConfig      {{SessionManagerConfig 
+				{EnableUrlRewriting false} 
+   		                {EnableCookies true} 
+				{EnableProtocolSwitchRewriting false} 
+				{EnablePersistentSessions false} 
+				{EnableSSLTracking false} 
+				{EnableSecurityIntegration false} 
+				{CookieDomain {}} 
+			   	{CookieName JSESSIONID} 
+				{CookiePath /} 
+				{CookieMaximumAge -1} 
+				{CookieSecure false} 
+				{PersistentDatasourceName {}} 
+				{PersistentUserId {}} 
+				{PersistentPassword {}} 
+				{PersistentDb2RowSize 0} 
+				{PersistentTableSpaceName {}} 
+				{TuningUsingMultiRowSchema false} 
+				{TuningMaxInMemorySessionCount 1000} 
+				{TuningAllowOverflow true} 
+				{TuningScheduleInvalidation false} 
+				{TuningInvalidationTimeout 30} 
+				{TuningWriteContents 0} 
+				{TuningWriteFrequency 0} 
+				{TuningWriteInterval 120} 
+				{InvalidationScheduleFirstHour 0} 
+				{InvalidationScheduleSecondHour 0}
+			   } 
+			    {ThreadPoolConfig 
+				{MinimumSize 10} 
+				{MaximumSize 50} 
+				{InactivityTimeout 10} 
+				{IsGrowable false}
+			   } 
+			    {Transports 
+				{{{MaxKeepAlive 45} 
+				{MaxReqKeepAlive 100} 
+				{KeepAliveTimeout 5} 
+				{ConnectionTimeout 5} 
+				{Host *} 
+				{Port 9084} 
+				{BacklogConnections 511} 
+				{HttpProperties {}} 
+				{SSLEnabled false} 
+				{SSLConfig {}} 
+				{Protocol http}}}
+			   } 
+			    {DynamicCacheConfig 
+				{Enabled false} 
+				{CacheSize 1000} 
+				{DefaultPriority 1} 
+				{CacheGroups {}}
+			   }
+			 }
+
+  ModuleVisibility 3
+
+  UseDomainQualifiedUserNames False
+
+  DefaultDataSource {}
+

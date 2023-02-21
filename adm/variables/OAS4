@@ -1,0 +1,29 @@
+HOST=`hostname`
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+
+PATH=$PATH:/usr/bin:/bin:/usr/ccs/bin:/etc:/usr/sbin:$HOME/bin:/usr/bin/X11:/sbin:.:/$HOST/product/oas4/ows/4.0/bin:/$HOST/product/oas4/bin:/$HOST/product/oas4/orb/4.0/bin:/$HOST/product/oas4/orb/4.0/admin/cgi:/$HOST/product/oas4/ows/4.0/admin/cgi:/$HOST/product/express63/olap/bin:/usr/ucb
+
+export PATH
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+export VISUAL=vi
+export PS1='${HOSTNAME}:$LOGNAME:$PWD#'
+export ORACLE_TERM=vt220
+export JDK_HOME=/usr/jdk_base
+export ORACLE_HOME=/$HOST/product/oas4
+export ORAWEB_HOME=/$HOST/product/oas4/ows/4.0
+export OLAP_HOME=/$HOST/product/express63/olap
+export ORAWEB_SITE=website40
+export ORAWEB_ADMIN=/$HOST/product/oas4/ows/admin
+export LIBPATH=$LIBPATH:/$HOST/product/oas4/orb/4.0/lib:/$HOST/product/oas4/lib:/$HOST/product/oas4/ows/4.0/lib:/$HOST/product/express63/lib:/$HOST/product/express63/olap/lib:/$HOST/product/express63/olap/oes632/service
+export CLASSPATH=/$HOST/product/oas4/ows/4.0/classes:/$HOST/product/oas4/ows/4.0/admin
+export TMPDIR=/tmp/oratmp
+export ORB_HOME=/$HOST/product/oas4/orb/4.0
+export OES_HOME=/$HOST/product/express63
+umask 022
+. /$HOST/product/oas4/ows/4.0/install/owsenv_bsh.sh

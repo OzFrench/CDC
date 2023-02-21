@@ -1,0 +1,16 @@
+#
+# Liste des fichiers logs a faire tourner
+#
+#
+# Ajouter no a la fin de la ligne pour desactiver le script (fichier reste intacte)
+#
+#
+#
+/fsdevelop2/product/was4/ihs/logs/bb_access_log:yes
+/fsdevelop2/product/was4/ihs/logs/bb_error_log:yes
+/var/adm/syslog/syslog.log:yes
+/fsdevelop2/product/websphere/logs/tracefile:no
+/fsdevelop2/product/was4/logs/tracefile:no
+/fsdevelop2/product/was4/ihs/logs/ao_access_log:yes
+/fsdevelop2/product/was4/ihs/logs/ao_error_log:yes
+/fsdevelop2/product/was4/ihs/logs/ao_error_log:yes

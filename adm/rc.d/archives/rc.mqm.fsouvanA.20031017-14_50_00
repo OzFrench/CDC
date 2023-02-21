@@ -1,0 +1,64 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start des queues manager MQSERIES
+# Auteur: Jerome HABELSKI
+# Date: 25/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+START_MQM="Demarrage des Queues Managers"
+STOP_MQM="Arret des Queues Managers"
+
+START_BIN=/usr/bin/strmqm
+STOP_BIN=/usr/bin/endmqm
+
+# Placer ici la liste des queues pour chaque application
+QUEUE_CRIPS="FS60 FS62 FS63 FS64 FS65 FS66 FS67 FS68 FS69 FS6A FS6B"
+QUEUE_MQM="FS71 FS72 FS73 FUII001 FUMAO074 FUMA075"
+
+case "$1" in
+    'start')
+        if [ -f "$START_BIN" ]
+		then
+            echo $START_MQM
+            su mqm -c /fsdevelop2/product/mqm/outils/mqm_start_MERC-SAA_MQS.sh
+            su mqm -c /fsdevelop2/product/mqm/outils/mqm_startALL_MQS.sh
+	    for i in $QUEUE_CRIPS
+            do
+                su fcrips -c $START_BIN $i & >/dev/console
+            done
+            for i in $QUEUE_MQM
+	    do
+                su mqm -c $START_BIN $i & >/dev/console
+            done
+	fi
+        ;;
+    'stop')
+        if [ -f "$STOP_BIN" ]
+		then
+            echo $STOP_MQM
+	   su mqm -c /fsdevelop2/product/mqm/outils/mqm_stop_MERC-SAA_MQS.sh
+           su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopALL_MQS.sh
+	   for i in $QUEUE_CRIPS
+            do
+                su fcrips -c $STOP_BIN $i & >/dev/console
+            done
+           for i in $QUEUE_MQM
+           do
+                su mqm -c $STOP_BIN -c $i & >/dev/console
+           done
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

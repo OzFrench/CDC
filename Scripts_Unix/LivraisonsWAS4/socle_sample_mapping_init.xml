@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE INIT SYSTEM "Init.dtd">
+<INIT>
+	<PARAM>
+		<CLE>PARENT</CLE>
+		<VALEUR>mapping</VALEUR>
+		<REDEFINISSABLE>yes</REDEFINISSABLE>
+	</PARAM>
+	
+	<PARAM>
+		<CLE>REPERTOIRE_TRAVAIL</CLE>
+		<VALEUR>|fsdevelop2|product|was4|installedApps|SocleTechniqueSampleEAR.ear|SocleTechniqueSample.war</VALEUR>
+		<REDEFINISSABLE>yes</REDEFINISSABLE>
+	</PARAM>
+	
+	<PARAM>
+		<CLE>SocleSampleFacadeMapping</CLE>
+		<VALEUR>fr.icdc.dabfi7.mapping.socle_sample.default_impl.SocleSampleFacadeMappingImpl</VALEUR>
+		<REDEFINISSABLE>no</REDEFINISSABLE>
+	</PARAM>
+	
+	<PARAM>
+		<CLE>DONNEES</CLE>
+		<VALEUR>FS_SV_AGF</VALEUR>
+		<REDEFINISSABLE>yes</REDEFINISSABLE>
+	</PARAM>
+</INIT>

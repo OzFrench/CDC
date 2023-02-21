@@ -1,0 +1,29 @@
+#!/usr/bin/ksh
+
+CPU=0
+integer MEM=0
+IOWAIT=0
+PROCESS=$1
+PROCESSNUM=0
+PRESPROC=0
+integer i=0
+
+PROCESSNUM=`ps -ef | grep -w $PROCESS | grep -v grep | grep -v process | awk '{print $2}'`
+
+until (( $i==360 || $PRESPROC==1 ))
+#until (( $i==360 ))
+do
+(( i=i+1 ))
+ps -ef | grep -w $PROCESSNUM | grep -v grep > /dev/null
+PRESPROC=$?
+if (( $PRESPROC==0 ))
+  then
+    CPU=`ps aux | grep -w $PROCESSNUM | grep -v grep | awk '{print $3}' | grep -v process`
+    MEM=`ps aux | grep -w $PROCESSNUM | grep -v grep | awk '{print $5}' | grep -v process`
+    IOWAIT=`iostat | awk '{print $6}' | grep -v user | grep -v Kb | head -2 | tail -1`
+    print "cpu = $CPU% ; mem = $MEM Ko ; iowait = $IOWAIT%">>result_procmon_$PROCESS.txt
+    sleep 30
+  else
+    print "Le process $PROCESS est termine."
+fi
+done

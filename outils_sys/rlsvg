@@ -1,0 +1,12 @@
+VOLUME GROUP:   1pubvg_app01             VG IDENTIFIER:  00c9c7ea00004c000000010973240776
+VG STATE:       active                   PP SIZE:        64 megabyte(s)
+VG PERMISSION:  read/write               TOTAL PPs:      15190 (972160 megabytes)
+MAX LVs:        512                      FREE PPs:       7428 (475392 megabytes)
+LVs:            15                       USED PPs:       7762 (496768 megabytes)
+OPEN LVs:       15                       QUORUM:         18
+TOTAL PVs:      35                       VG DESCRIPTORS: 35
+STALE PVs:      0                        STALE PPs:      0
+ACTIVE PVs:     35                       AUTO ON:        yes
+MAX PPs per PV: 1016                     MAX PVs:        128
+LTG size:       128 kilobyte(s)          AUTO SYNC:      no
+HOT SPARE:      no                       BB POLICY:      relocatable 

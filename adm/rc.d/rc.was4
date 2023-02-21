@@ -1,0 +1,38 @@
+#!/usr/bin/ksh
+
+###########################################################
+# Script de demarrage de Websphere
+# Auteur: Jerome HABELSKI
+# Date: 26/02/2002
+###########################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+DATE=`/bin/date '+%Y%m%d%H%M%S'`
+MACHINE=fsdevelop2
+WASHOME=/${MACHINE}/product/was4 
+LOGDIR=/tmp/LogStartStopFSDEVELOP2
+START_WEB="Demarrage de Websphere"
+STOP_WEB="Arret de Websphere"
+
+
+##  MAIN
+case "$1" in
+    'start')
+	echo "${START_WEB}" > ${LOGDIR}/${MACHINE}_startwas4_${DATE}.log
+	${WASHOME}/livraison/script/StartClonesFsdev2.sh >> ${LOGDIR}/${MACHINE}_startwas4_${DATE}.log
+        ;;
+    'stop')
+	echo "${STOP_WEB}" > ${LOGDIR}/${MACHINE}_stopwas4_${DATE}.log
+	${WASHOME}/livraison/script/StopClonesFsdev2.sh >> ${LOGDIR}/${MACHINE}_startwas4_${DATE}.log
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

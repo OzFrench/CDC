@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE INIT SYSTEM "Init.dtd">
+<INIT>
+	
+	<PARAM>
+		<CLE>PARENT</CLE>
+		<VALEUR>socle</VALEUR>
+		<REDEFINISSABLE>yes</REDEFINISSABLE>
+	</PARAM>
+	
+	<PARAM>
+		<CLE>REPERTOIRE_TRAVAIL</CLE>
+		<VALEUR>|fsdevelop2|product|was4|installedApps|SocleTechniqueSampleEAR.ear|SocleTechniqueSample.war</VALEUR>
+		<REDEFINISSABLE>yes</REDEFINISSABLE>
+	</PARAM>
+	
+</INIT> 

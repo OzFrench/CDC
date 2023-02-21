@@ -1,0 +1,89 @@
+#! /bin/ksh
+# ----------------------------------------------------------------------------
+# Affichage formate du ps en fonction des process fils
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# Usage
+# ----------------------------------------------------------------------------
+Usage ()
+{
+        echo
+        echo "NewPs fils"
+        echo "NewPs fils <Process_Id>"
+        echo "NewPs pere"
+        echo "NewPs pere <Process_Id>"
+        echo
+}
+
+# ----------------------------------------------------------------------------
+# Affiche tous les peres d'un process donne
+# ----------------------------------------------------------------------------
+GetPere ()
+{(
+Fils=$1
+Space="$2"
+
+        Pere=`echo "$AllPs" | grep "^:$Fils:"` && \
+        {
+                Pere=`echo "$Pere" | cut -f3 -d:`
+                [ "$Pere" -eq "0" ] && exit 0
+                echo "$Space""|_"`echo "$AllPs" | grep "^:$Pere:"`
+                GetPere $Pere "$Space  " 
+        }
+)}
+
+# ----------------------------------------------------------------------------
+# Affiche tous les fils d'un process donne
+# ----------------------------------------------------------------------------
+GetFils ()
+{(
+Pere=$1
+Space="$2"
+
+        Fils=`echo "$AllPs" | grep "^:.*:$Pere:"` && \
+        {
+                Fils=`echo "$Fils" | cut -f2 -d:`
+                Last=`echo "$Fils" | tail -1`
+                for Var in $Fils
+                do
+                        echo "$Space""|_"`echo "$AllPs" | grep "^:$Var:"`
+                        if [ "$Var" -ne "$Last" ] 
+                        then
+                                Space=`echo "$Space " | sed "s/.$/|/g"`
+                                GetFils $Var "$Space " 
+                        else
+                                GetFils $Var "$Space  " 
+                        fi
+                        [ "$Var" -ne "$Last" ] && Space=`echo "$Space" | sed "s/.$//g"`
+                done
+        }
+)}
+
+# ----------------------------------------------------------------------------
+#                             DEBUT DU CODE
+# ----------------------------------------------------------------------------
+
+# Recuperation de tous les process
+AllPs=`ps -eo pid,ppid,uname,args \
+        | sed "s/\(^[ ]*\)\([^ ]*\)\([ ]*\)\([^ ]*\)\([ ]*\)\([^ ]*\)\([ ]*\)\([^ ]*\)/:\2:\4:\6:\8/g"`
+
+# Test des parametres
+Opt=$1
+Param=$2
+[ -z "$Param" ] && Param=1
+case $Opt in 
+        "fils")
+                Space=""
+                echo "$Space"`echo "$AllPs" | grep "^:$Param:"`
+                GetFils $Param "$Space"
+        ;;
+        "pere")
+                Space=""
+                echo "$Space"`echo "$AllPs" | grep "^:$Param:"`
+                GetPere $Param "$Space"
+        ;;
+        *)
+                Usage
+        ;;
+esac

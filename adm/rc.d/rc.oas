@@ -1,0 +1,106 @@
+#!/usr/bin/ksh
+
+#################################################################
+# Script d'arret/demarrage/relance de Oracle Application Server #
+# Auteur: Arnaud BOUR                                           #
+# Date: 02/05/2002                                              #
+#################################################################
+
+. /usr/local/adm/variables/OAS4
+touch oas.tmp
+chmod 777 oas.tmp
+
+USAGE="usage: $0 {start|stop|restart}"
+
+HOST=`hostname`
+PORTWWW=1480
+PORTADM=8888
+
+STARTADM="Demarrage du noeud OAS4 sur $HOST"
+STOPADM="Arret du noeud OAS4 sur $HOST"
+STARTWWW="Demarrage du serveur http d'OAS4 sur $HOST"
+STOPWWW="Arret du serveur http d'OAS4 sur $HOST"
+
+case "$1" in
+	'start')
+		print "$STARTADM" >> oas.tmp
+		su fowas -c "owsctl start -nodemgr 2>> oas.tmp"
+		print "" >> oas.tmp
+		print "$STARTWWW" >> oas.tmp
+		su fowas -c "owsctl start"
+		;;
+	'stop')
+		print "$STOPADM" >> oas.tmp
+		su fowas -c "owsctl stop -nodemgr 2>> oas.tmp"
+		print "" >> oas.tmp
+		print "$STOPWWW" >> oas.tmp
+		print "" >> oas.tmp
+		su fowas -c "owsctl stop"
+		ps -ef | grep wrksf | grep -v grep
+                TEST1=$?
+                if ((TEST1==0))
+                        then
+                                PROC=ps -ef | grep wrksf | grep -v grep | awk '{print $2}'
+                                kill -9 $PROC
+                                print "" >> oas.tmp
+                                print "Un kill du process wrksf a ete nescessaire" >> oas.tmp
+                fi
+                ps -ef | grep oas | grep -v grep | grep -vw rc.oas
+                TEST2=$?
+                if ((TEST2==0))
+                        then
+                                for i in `ps -ef | grep oas | grep -v grep | grep -vw rc.oas | awk '{print $2}'`
+                                        do
+                                                kill -9 $i
+                                        done
+				print "Des process residuels appartenant a OAS4 ont été trouvés et killés" >> oas.tmp
+				print "" >> oas.tmp
+                	else
+                        	print "Aucun autre process appartenant a OAS4 n'a ete trouve : OAS4 est totalement arrete!" >> oas.tmp
+				print "" >> oas.tmp
+                fi
+		;;
+	'restart')
+		print "$STOPADM" >> oas.tmp
+                su fowas -c "owsctl stop -nodemgr 2>> oas.tmp"
+                print "" >> oas.tmp
+                print "$STOPWWW" >> oas.tmp
+		print "" >> oas.tmp
+                su fowas -c "owsctl stop"
+		ps -ef | grep wrksf | grep -v grep
+		TEST1=$?
+		if ((TEST1==0))
+			then
+				PROC=`ps -ef | grep wrksf | grep -v grep | awk '{print $2}'`
+				kill -9 $PROC
+				print "" >> oas.tmp
+				print "Un kill du process wrksf a ete nescessaire" >> oas.tmp
+		fi
+		ps -ef | grep oas | grep -v grep | grep -vw rc.oas
+		TEST2=$?
+		if ((TEST2==0))
+			then
+				for i in `ps -ef | grep oas | grep -v grep | grep -vw rc.oas | awk '{print $2}'`
+					do
+						kill -9 $i
+					done
+				print "Des process residuels appartenant a OAS4 ont été trouvés et killés" >> oas.tmp
+				print "" >> oas.tmp
+			else
+				print "Aucun autre process appartenant a OAS4 n'a ete trouve : OAS4 est totalement arrete!" >> oas.tmp
+				print "" >> oas.tmp
+		fi
+		print "$STARTADM" >> oas.tmp
+                su fowas -c "owsctl start -nodemgr 2>> oas.tmp"
+                print "" >> oas.tmp
+                print "$STARTWWW" >> oas.tmp
+                su fowas -c "owsctl start"
+                ;;
+	*)
+		echo $USAGE > oas.tmp
+		;;
+esac
+
+cat oas.tmp | mail -s "Arret/Demarrage automatique de OAS4 sur $HOST" root
+rm oas.tmp
+. /.profile

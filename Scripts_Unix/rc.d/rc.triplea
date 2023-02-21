@@ -1,0 +1,57 @@
+#!/usr/bin/ksh
+
+###########################################################
+# Script de demarrage des openservers et de la Subscription et du launcher
+# Auteur: Jerome HABELSKI
+# Date: 25/02/2002
+###########################################################
+
+USAGE="usage: $0 {start|stop}"
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+AAAHOME="/fsdevelop2/dev/ta"	export AAAHOME
+
+START_TA="Demarrage des openservers, de la Subscription et du launcher"
+STOP_TA="Arret des openservers, de la Subscription et du launcher"
+
+
+START_SCRIPT=$AAAHOME/admin/scripts/startallsrv.sh
+START_SUB=$AAAHOME/admin/scripts/Subscription.sh
+START_LAUNCH="echo 1|$AAAHOME/aaa LCI >/dev/null 2>&1"
+
+STOP_SCRIPT=$AAAHOME/admin/scripts/stopallsrv.sh
+STOP_SUB=$AAAHOME/SUBDSTOP
+STOP_LAUNCH="echo 2|$AAAHOME/aaa LCI >/dev/null 2>&1"
+
+
+case "$1" in
+    'start')
+        if [ -f "$START_SCRIPT" ]
+		then
+            echo $START_TA
+	    cd $AAAHOME	
+	    rm $STOP_SUB
+            su ftriplea -c $START_SCRIPT & >/dev/console
+            su ftriplea -c $START_SUB & >/dev/console
+	    su ftriplea -c $START_LAUNCH & >/dev/console
+	    cd -
+        fi
+        ;;
+    'stop')
+        if [ -f "$STOP_SCRIPT" ]
+		then
+            echo $STOP_TA
+            su ftriplea -c $STOP_SCRIPT & >/dev/console
+            su ftriplea -c touch $STOP_SUB & >/dev/console
+	    su ftriplea -c $STOP_LAUNCH & >/dev/console
+        fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

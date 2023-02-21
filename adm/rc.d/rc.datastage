@@ -1,0 +1,32 @@
+#!/usr/bin/ksh
+
+####################################
+# Script de demarrage de Datastage #
+# Auteur: Arnaud BOUR              #
+# Date: 30/04/2002                 #
+####################################
+set -x
+
+USAGE="usage: $0 {start|stop}"
+
+HOST=`hostname`
+
+STARTDAT="Demarrage de Datastage"
+STOPDAT="Arret de Datastage"
+
+case "$1" in
+	'start')
+		print "$STARTDAT" > datastage.tmp
+		/etc/uv.rc start 2>> datastage.tmp
+		;;
+	'stop')
+		print "$STOPDAT" > datastage.tmp
+		/etc/uv.rc stop 2>> datastage.tmp
+		;;
+	*)
+		echo $USAGE > datastage.tmp
+		;;
+esac
+cat datastage.tmp | mail -s "Arret/Demarrage de Datastage sur $HOST" root
+rm datastage.tmp
+. /.profile

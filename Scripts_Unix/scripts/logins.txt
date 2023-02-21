@@ -1,0 +1,4 @@
+mqm:mqm
+fexploit:exp
+fpcft:fpcft
+uvadm:uvadm

@@ -1,0 +1,68 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start des applications de FSDEVELOP2
+# Auteur: Jerome HABELSKI
+# Date: 27/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+ADM=/usr/local/adm/rc.d		export ADM
+
+START_APP="Demarrage des Applications sur FSDEVELOP2"
+STOP_APP="Arret des Applications sur FSDEVELOP2"
+
+
+case "$1" in
+    'start')
+        if [ -d "$ADM" ]
+		then
+            echo $START_APP
+       	    $ADM/rc.syb1192dev start & >/dev/console
+       	    $ADM/rc.syb12004dev start & >/dev/console
+       	    $ADM/rc.syb120dev start & >/dev/console
+       	    $ADM/rc.oracle start & >/dev/console
+       	    $ADM/rc.tina start & >/dev/console
+       	    $ADM/rc.mqm start & >/dev/console
+       	    $ADM/rc.http start & >/dev/console
+       	    $ADM/rc.essbase start & >/dev/console
+       	    $ADM/rc.websphere start & >/dev/console
+       	    $ADM/rc.triplea start & >/dev/console
+       	    $ADM/rc.oas start & >/dev/console
+       	    $ADM/rc.express start & >/dev/console
+       	    $ADM/rc.datastage start & >/dev/console
+       	    $ADM/rc.ctg start & >/dev/console
+	fi
+        ;;
+    'stop')
+        if [ -d "$ADM" ]
+		then
+            echo $STOP_APP
+            $ADM/rc.syb1192dev stop & >/dev/console
+            $ADM/rc.syb120dev stop & >/dev/console
+            $ADM/rc.syb12004dev stop & >/dev/console
+            $ADM/rc.oracle stop & >/dev/console
+            $ADM/rc.tina stop & >/dev/console
+            $ADM/rc.mqm stop & >/dev/console
+            $ADM/rc.http stop & >/dev/console
+            $ADM/rc.essbase stop & >/dev/console
+            $ADM/rc.websphere stop & >/dev/console
+            $ADM/rc.triplea stop & >/dev/console
+            $ADM/rc.oas stop & >/dev/console
+            $ADM/rc.express stop & >/dev/console
+            $ADM/rc.datastage stop & >/dev/console
+            $ADM/rc.ctg stop & >/dev/console
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

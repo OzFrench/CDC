@@ -1,0 +1,27 @@
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+
+PATH=$PATH:/usr/bin:/bin:/usr/ccs/bin:/etc:/usr/sbin:$HOME/bin:/usr/bin/X11:/sbin:.:/fsdevelop2/product/oas4/ows/4.0/bin:/fsdevelop2/product/oas4/bin:/fsdevelop2/product/oas4/orb/4.0/bin:/fsdevelop2/product/oas4/orb/4.0/admin/cgi:/fsdevelop2/product/oas4/ows/4.0/admin/cgi:/fsdevelop2/product/express63/olap/bin:/usr/ucb
+
+export PATH
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+export VISUAL=vi
+export PS1='${HOSTNAME}:$LOGNAME:$PWD#'
+export ORACLE_TERM=vt220
+export JDK_HOME=/usr/jdk_base
+export ORACLE_HOME=/fsdevelop2/product/oas4
+export ORAWEB_HOME=/fsdevelop2/product/oas4/ows/4.0
+export OLAP_HOME=/fsdevelop2/product/express63/olap
+export ORAWEB_SITE=website40
+export ORAWEB_ADMIN=/fsdevelop2/product/oas4/ows/admin
+export LIBPATH=$LIBPATH:/fsdevelop2/product/oas4/orb/4.0/lib:/fsdevelop2/product/oas4/lib:/fsdevelop2/product/oas4/ows/4.0/lib:/fsdevelop2/product/express63/lib:/fsdevelop2/product/express63/olap/lib:/fsdevelop2/product/express63/olap/oes632/service
+export CLASSPATH=/fsdevelop2/product/oas4/ows/4.0/classes:/fsdevelop2/product/oas4/ows/4.0/admin
+export TMPDIR=/tmp/oratmp
+export ORB_HOME=/fsdevelop2/product/oas4/orb/4.0
+export OES_HOME=/fsdevelop2/product/express63
+umask 022
+. /fsdevelop2/product/oas4/ows/4.0/install/owsenv_bsh.sh

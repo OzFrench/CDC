@@ -1,0 +1,60 @@
+#!/usr/bin/ksh
+
+###########################################################
+# Script de demarrage de Websphere
+# Auteur: Jerome HABELSKI
+# Date: 26/02/2002
+###########################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+MACHINE=fsdevelop2
+PORT=5208
+WEBHOME=/$MACHINE/product/websphere  		export WEBHOME
+
+START_WEB="Demarrage de Websphere"
+STOP_WEB="Arret de Websphere"
+
+START_SCRIPT=$WEBHOME/bin/startupServer.sh
+STOP_SCRIPT=$WEBHOME/bin/wscp.sh
+
+AR_OPCVM=$WEBHOME/admin/Appserver_AR.ksh
+
+function web_stop
+{
+cd $WEBHOME
+echo "wscp.hostName=$1" >parmwscp.txt
+echo "wscp.hostPort=$2" >>parmwscp.txt
+chown webadm:staff $WEBHOME/parmwscp.txt
+
+$STOP_SCRIPT -p parmwscp.txt <<!
+Node stop /Node:$MACHINE/
+!
+rm $WEBHOME/parmwscp.txt
+}
+
+##  MAIN
+case "$1" in
+    'start')
+	/fsdevelop2/product/was4/livraison/script/StartAllClones.sh
+        ;;
+    'stop')
+        if [ -f "$STOP_SCRIPT" ]
+		then
+            echo $STOP_WEB
+            . /fsdevelop2/product/websphere/.profile
+	    su fexploit -c $AR_OPCVM $MACHINE ServeurAgence stop & >/dev/console
+	    web_stop $MACHINE $PORT
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

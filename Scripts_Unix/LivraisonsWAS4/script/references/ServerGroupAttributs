@@ -1,0 +1,190 @@
+--- Attributs du ServerGroup ---
+
+   Name testServerGroup
+
+   FullName /ServerGroup:testServerGroup/
+
+   IfStarted True
+
+   StartTime 1034067172857
+
+   EJBServerAttributes {{Name AttributeNotSet} 
+			{FullName AttributeNotSet} 
+			{CurrentState AttributeNotSet} 
+			{DesiredState AttributeNotSet} 
+			{StartTime AttributeNotSet} 
+			{Executable java} 
+			{ExecutableActive AttributeNotSet} 
+			{CommandLineArgs {}} 
+			{CommandLineArgsActive AttributeNotSet} 
+			{Environment {}} 
+			{EnvironmentActive AttributeNotSet} 
+			{UserId {}} 
+			{UserIdActive AttributeNotSet} 
+			{GroupId {}} 
+			{GroupIdActive AttributeNotSet} 
+			{WorkingDirectory {}} 
+			{WorkingDirectoryActive AttributeNotSet} 
+			{Umask 18} {UmaskActive AttributeNotSet} 
+			{Stdin {}} 
+			{StdinActive AttributeNotSet} 
+			{Stdout stdout.txt} 
+			{StdoutActive AttributeNotSet} 
+			{Stderr stderr.txt} 
+			{StderrActive AttributeNotSet} 
+			{MaxStartupAttempts 2} 
+			{ProcessPriority 20} 
+			{ProcessPriorityActive AttributeNotSet} 
+			{PingInterval 60} 
+			{PingTimeout 200} 
+			{PingInitialTimeout 600} 
+			{ProcessId AttributeNotSet} 
+			{SelectionPolicy roundrobinpreferlocal} 
+	
+			{JVMConfig 
+				{AdditionalCommandLineArgs {}} 
+				{BootClasspathAppend {}} 
+				{BootClasspathPrepend {}} 
+				{BootClasspathReplace {}} 
+				{Classpaths {}} 
+				{DebugMode false} 
+				{DebugString {}} 
+				{DisableJIT false} 
+				{HProfArgs {}} 
+				{InitialHeapSize 32} 
+				{MaxHeapSize 64} 
+				{RunHProf false} 
+				{SystemProperties {}} 
+				{VerboseClassLoading false} 
+				{VerboseGC false} 
+				{VerboseJNI false} 
+				{GeneratedCommandLineArgs -Xms32m -Xmx64m }
+			} 
+
+			{ORBConfig 
+				{OrbPropertiesTable {}} 
+				{RMIRemoteCodebase {}} 
+				{BootstrapHostname {}} 
+				{BootstrapPort 900} 
+				{ConnectionCacheMaximum 240} 
+				{ConnectionCacheMinimum 100} 
+				{ExternalConfigURL {}} 
+				{ForceTunnel whenrequired} 
+				{ListenerPort 0} 
+				{ThreadPoolSize 20}
+				{LocateRequestTimeout 180} 
+				{LSDHostname {}} 
+				{LocalHostname {}} 
+				{RequestRetriesCount 1} 
+				{RequestRetriesDelay 0} 
+				{RequestTimeout 180} 
+				{TunnelAgentURL {}} 
+				{CommTraceEnabled false} 
+				{NoLocalCopies false} 
+				{SSLConfig {}} 
+				{SSLListenerPort 0}
+			} 
+	
+			{CustomServiceConfig 
+				{{Name {Automatic Generation of Plugin Configuration}} 
+				{Description {If enabled, the plugin configuration files will be regenerated when the application server is started}} 
+				{Classname com.ibm.websphere.plugincfg.initializers.AEPluginCfgService} 
+				{Classpath null} 
+				{Enabled false} 
+				{ExternalConfigURL {}} 
+				{DynamicProperties {}}}} 
+				{TraceSpec {}} 
+				{TraceSpecActive AttributeNotSet} 
+				{TraceOutput {}} 
+				{TraceOutputActive AttributeNotSet} 
+				{LogFileSpec {}} 
+				{LogFileSpecActive AttributeNotSet} 
+				{AdminAgentIOR AttributeNotSet} 
+				{WLMTemplateIOR AttributeNotSet} 
+				{SystemProperties {}} 
+				{SystemPropertiesActive AttributeNotSet} 
+				{DebugEnabled False} 
+				{SourcePath AttributeNotSet}
+				{DebugEnabledActive AttributeNotSet} 
+				{OLTEnabled False} {OLTServerHost localhost} 
+				{OLTServerPort 2102} 
+				{OLTEnabledActive AttributeNotSet} 
+				{NodeStartState Current} 
+				{OLTServerHostActive AttributeNotSet} 
+				{OLTServerPortActive AttributeNotSet} 
+				{IsAClone False} 
+				{TranTimeout 120} 
+				{TranInactivityTimeout 60000} 
+				{ThreadPoolSize 20} 
+				{SecurityEnabled False} 
+				{SecurityEnabledActive AttributeNotSet} 
+				{PmiSpec AttributeNotSet} 
+				{SourcePathActive AttributeNotSet} 
+
+			{CacheConfig 
+				{cacheSweepInterval 1000} 
+				{passivationDirectory {}} 
+				{cacheSize 2047}} 
+				{CacheConfigActive AttributeNotSet} 
+
+			{WebContainerConfig 
+				{SessionManagerConfig 
+					{EnableUrlRewriting false} 
+					{EnableCookies true} 
+					{EnableProtocolSwitchRewriting false} 
+					{EnablePersistentSessions false} 
+					{EnableSSLTracking false} 
+					{EnableSecurityIntegration false} 
+					{CookieDomain {}} 
+					{CookieName JSESSIONID} 
+					{CookiePath /} {CookieMaximumAge -1} 
+					{CookieSecure false} 
+					{PersistentDatasourceName {}} 
+					{PersistentUserId {}} 
+					{PersistentPassword {}} 
+					{PersistentDb2RowSize 0} 
+					{PersistentTableSpaceName {}} 
+					{TuningUsingMultiRowSchema false} 
+					{TuningMaxInMemorySessionCount 1000} 
+					{TuningAllowOverflow true} 
+					{TuningScheduleInvalidation false} 
+					{TuningInvalidationTimeout 30} 
+					{TuningWriteContents 0}
+					{TuningWriteFrequency 0} 
+					{TuningWriteInterval 120} 
+					{InvalidationScheduleFirstHour 0} 
+					{InvalidationScheduleSecondHour 0}
+				} 
+
+				{ThreadPoolConfig 
+					{MinimumSize 10} 
+					{MaximumSize 50} 
+					{InactivityTimeout 10} 
+					{IsGrowable false}
+				} 
+
+				{Transports 
+					{{{MaxKeepAlive 45} 
+					{MaxReqKeepAlive 100} 
+					{KeepAliveTimeout 5} 
+					{ConnectionTimeout 5} 
+					{Host *} 
+					{Port 9080} 
+					{BacklogConnections 511} 
+					{HttpProperties {}} 
+					{SSLEnabled false} 
+					{SSLConfig {}} 
+					{Protocol http}
+				}
+			} 
+			{DynamicCacheConfig 
+				{Enabled false} 
+				{CacheSize 1000} 
+				{DefaultPriority 1} 
+				{CacheGroups {}}}
+			}
+
+			{ModuleVisibility 3} 
+			{UseDomainQualifiedUserNames False} 
+			{DefaultDataSource {}} 
+

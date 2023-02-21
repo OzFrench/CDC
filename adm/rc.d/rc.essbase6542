@@ -1,0 +1,38 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start de ESSBASE
+# Auteur: Jean LOESCH
+# Date: 03/06/2003
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+START_ESS="Demarrage du serveur ESSBASE"
+STOP_ESS="Arret du serveur ESSBASE"
+
+ESSBASE=/fsdevelop2/product/essbase6.5.4.2
+START_BIN=$ESSBASE/bin/CITI_start_server
+STOP_BIN=$ESSBASE/bin/CITI_shutdown_server
+
+# MAIN
+case "$1" in
+    'start')
+		echo $START_ESS
+	    su essbase -c $START_BIN & > /dev/console
+        ;;
+    'stop')
+		echo $STOP_ESS
+	    su essbase -c $STOP_BIN & > /dev/console
+		;;
+    *)
+        echo $USAGE
+        ;;
+esac

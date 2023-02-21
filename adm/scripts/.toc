@@ -1,0 +1,21 @@
+0 060314144203 2
+rsync-2.3.1.0.bff 4 R I freeware.rsync {
+freeware.rsync.rte 02.03.0001.0000 1 N U en_US Remote File Synchronization and Transfer Utility
+[
+%
+/usr 5
+/usr/local 7
+/usr/local/bin 526
+/usr/local/lib 3
+/usr/local/lib/rsync-2.3.1 152
+/usr/local/man 5
+/usr/local/man/man1 69
+/usr/local/man/man5 39
+/usr/lpp 3
+/usr/lpp/freeware.rsync 1
+INSTWORK 16 16
+%
+%
+%
+]
+}

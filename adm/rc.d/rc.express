@@ -1,0 +1,33 @@
+#!/usr/bin/ksh
+
+#########################################
+# Script de demarrage de Oracle Express #
+# Auteur: Arnaud BOUR                   #
+# Date: 30/04/2002                      #
+#########################################
+
+USAGE="usage: $0 {start|stop}"
+
+HOST=`hostname`
+
+. /$HOST/product/express63/.profile
+
+STARTEXP="Demarrage d'Oracle Express"
+STOPEXP="Arret d'Oracle Express"
+
+case "$1" in
+	'start')
+		print "$STARTEXP" > express.tmp
+		/etc/express start 2>> express.tmp
+		;;
+	'stop')
+		print "$STOPEXP" > express.tmp
+		/etc/express stop 2>> express.tmp
+		;;
+	*)
+		echo $USAGE > express.tmp
+		;;
+esac
+cat express.tmp | mail -s "Arret/Demarrage d'Oracle Express sur $HOST" root
+rm express.tmp
+. /.profile

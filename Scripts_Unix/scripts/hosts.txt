@@ -1,0 +1,12 @@
+fsdevelop2:AIX
+fsdevelop0:AIX
+fsmiami:AIX
+fschicago0:AIX
+fschicago1:AIX
+fshouston:AIX
+fsmilan:AIX
+fstokyo:AIX
+fsdarwin:AIX
+fsbris:SunOS
+fsbane:SunOS
+fscairns:SunOS

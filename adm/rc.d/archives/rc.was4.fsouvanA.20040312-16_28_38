@@ -1,0 +1,39 @@
+#!/usr/bin/ksh
+
+###########################################################
+# Script de demarrage de Websphere
+# Auteur: Jerome HABELSKI
+# Date: 26/02/2002
+###########################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+DATE=`/bin/date '+%Y%m%d%H%M%S'`
+MACHINE=fsdevelop2
+PORT=5208
+WASHOME=/${MACHINE}/product/was4 
+
+START_WEB="Demarrage de Websphere"
+STOP_WEB="Arret de Websphere"
+
+
+##  MAIN
+case "$1" in
+    'start')
+	echo ${START_WEB}
+	${WASHOME}/livraison/script/StartAllClones.sh
+        ;;
+    'stop')
+	echo ${STOP_WEB}
+	${WASHOME}/livraison/script/StopAllClones.sh
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

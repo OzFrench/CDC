@@ -1,0 +1,65 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start des queues manager MQSERIES
+# Auteur: Jerome HABELSKI
+# Date: 25/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+START_MQM="Demarrage des Queues Managers"
+STOP_MQM="Arret des Queues Managers"
+
+START_BIN=/usr/bin/strmqm
+STOP_BIN=/usr/bin/endmqm
+
+# Placer ici la liste des queues pour chaque application
+QUEUE_CRIPS="FS60 FS62 FS63 FS64 FS65 FS66 FS67 FS68 FS69 FS6A FS6B"
+QUEUE_MQM="FS71 FS72 FS73 FUII001 FUMA075"
+
+case "$1" in
+    'start')
+        if [ -f "$START_BIN" ]
+		then
+            echo $START_MQM
+	# Ajout Simon le 17 oct 2003 pour demarrage FUMAO074
+	    su mqm -c /fsdevelop2/product/mqm/outils/mqm_startFUMAO074.sh
+	    sleep 5
+            su mqm -c /fsdevelop2/product/mqm/outils/mqm_startFUMAO075.sh
+            sleep 5
+	    su mqm -c /fsdevelop2/product/mqm/outils/mqm_startFUII001.sh
+	    sleep 5
+	    su mqm -c /fsdevelop2/product/mqm/outils/mqm_startFSMCI001.sh
+	    sleep 5
+	    su mqm -c /fsdevelop2/product/mqm/outils/mqm_startFSMET001.sh
+	fi
+        ;;
+    'stop')
+        if [ -f "$STOP_BIN" ]
+		then
+            echo $STOP_MQM
+	#Ajour Simon le 17 oct pour arret FUMAO074
+	   su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopFUMAO074.sh
+	   sleep 5
+           su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopFUMAO075.sh
+           sleep 5
+           su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopFSMET001.sh
+           sleep 5
+           su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopFSMCI001.sh
+           sleep 5
+           su mqm -c /fsdevelop2/product/mqm/outils/mqm_stopFUII001.sh
+           sleep 5
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

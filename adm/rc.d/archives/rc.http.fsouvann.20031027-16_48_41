@@ -1,0 +1,76 @@
+#!/bin/sh
+
+##################################################
+# Script de stop / start du serveur HTTP
+# Auteur: Jerome HABELSKI
+# Date: 26/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+START_HTTP="Demarrage du serveur HTTP"
+STOP_HTTP="Arret du serveur HTTP"
+
+HTTP_BIN=/usr/HTTPServer/bin/httpd
+HTTP_ADM=/usr/HTTPServer/ihs/bin/adminctl
+DIR_CONF=/usr/HTTPServer/conf
+DIR_LOGS=/usr/HTTPServer/logs
+
+case "$1" in
+    'start')
+        if [ -f "$HTTP_BIN" ]
+		then
+            echo $START_HTTP
+        	$HTTP_BIN -f $DIR_CONF/admin.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/ao.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/bb.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/cd.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/cw.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/httpd.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/ii.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/r4.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/tr.conf  & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/r4_was4.conf & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/cw_was4.conf & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/ii_was4.conf & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/gc_was4.conf & >/dev/console
+                $HTTP_BIN -f $DIR_CONF/ag_was4.conf & >/dev/console
+                $HTTP_BIN -f $DIR_CONF/xx_was4.conf & >/dev/console
+		$HTTP_BIN -f $DIR_CONF/cd_was4.conf & >/dev/console
+		$HTTP_ADM start & >/dev/console
+	fi
+        ;;
+    'stop')
+        if [ -f "$HTTP_BIN" ]
+		then
+            echo $STOP_HTTP
+		cat $DIR_LOGS/admin.pid|xargs kill -TERM
+		cat $DIR_LOGS/ao_httpd.pid|xargs kill -TERM
+		cat $DIR_LOGS/bb.pid|xargs kill -TERM
+		cat $DIR_LOGS/cd_httpd.pid|xargs kill -TERM
+		cat $DIR_LOGS/cw.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd.pid|xargs kill -TERM
+		cat $DIR_LOGS/ii_httpd.pid|xargs kill -TERM
+		cat $DIR_LOGS/r4_httpd.pid|xargs kill -TERM
+		cat $DIR_LOGS/tr.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_r4_was4.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_cw_was4.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_ii_was4.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_gc_was4.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_ag_was4.pid|xargs kill -TERM
+                cat $DIR_LOGS/httpd_xx_was4.pid|xargs kill -TERM
+		cat $DIR_LOGS/httpd_cd_was4.pid|xargs kill -TERM
+		$HTTP_ADM stop & >/dev/console
+	fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

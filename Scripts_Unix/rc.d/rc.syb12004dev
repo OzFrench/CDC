@@ -1,0 +1,45 @@
+#!/usr/bin/ksh
+
+##################################################
+# Script de demarrage des dataserver
+# Auteur: Jean LOESCH
+# Date: 25/02/2002
+##################################################
+
+USAGE="usage: $0 {start|stop}"
+
+
+##################################################
+#
+# A ADAPTER AU CONTEXTE
+#
+##################################################
+
+SYBASE="/sgbd/sybase/dev/12.0.0.4"	export SYBASE
+
+START_SYB="Demarrage sybase(DEV) V12.0.0.4 daemons"
+STOP_SYB="Arret sybase(DEV) V12.0.0.4 daemons"
+
+START_SCRIPT=$SYBASE/ASE-12_0/install/RUN_DEV_SERVERS
+STOP_SCRIPT=$SYBASE/ASE-12_0/install/STP_DEV_SERVERS
+
+
+case "$1" in
+    'start')
+        if [ -f "$START_SCRIPT" ]
+		then
+            echo $START_SYB
+            su sybase -c $START_SCRIPT & >/dev/console
+        fi
+        ;;
+    'stop')
+        if [ -f "$STOP_SCRIPT" ]
+		then
+            echo $STOP_SYB
+            su sybase -c $STOP_SCRIPT & >/dev/console
+        fi
+        ;;
+    *)
+        echo $USAGE
+        ;;
+esac

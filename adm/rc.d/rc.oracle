@@ -1,0 +1,26 @@
+#!/usr/bin/ksh
+
+ORACLE_BIN=/fsdevelop2/product/oracle/app/8.1.7.4/bin	export ORACLE_BIN
+
+usage() {
+        echo "Usage: $0 start|stop"
+}
+
+if [ $# -lt 1 ]
+then
+        usage
+        exit 1
+fi
+
+case $1 in
+start)
+        su oracle -c "ksh $ORACLE_BIN/dbstart"
+        ;;
+stop)
+        su oracle -c "ksh $ORACLE_BIN/dbshut"
+        ;;
+*)
+        usage
+        ;;
+esac
+
